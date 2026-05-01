@@ -400,6 +400,75 @@
     .process-step h4 { margin: 0 0 6px; font-size: 0.95rem; color: #1a4a2e; }
     .process-step p { font-size: 0.8rem; color: #666; margin: 0; line-height: 1.4; }
 
+    /* ===== Five Dimensions strip ===== */
+    .dimensions {
+      background: linear-gradient(135deg, #f5f9f7 0%, #e8f5e9 100%);
+      border-top: 1px solid #d4e8d8;
+      border-bottom: 1px solid #d4e8d8;
+      padding: 44px 24px;
+    }
+    .dimensions-inner { max-width: 1080px; margin: 0 auto; }
+    .dimensions h2 {
+      font-family: Georgia, serif;
+      color: #1a4a2e;
+      font-size: 1.5rem;
+      text-align: center;
+      margin: 0 0 6px;
+    }
+    .dimensions .lead {
+      text-align: center;
+      color: #1a4a2e;
+      font-size: 1rem;
+      margin: 0 auto 28px;
+      max-width: 720px;
+      opacity: 0.85;
+    }
+    .dimensions .lead strong { color: #1a4a2e; }
+    .dim-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+    }
+    @media (max-width: 1024px) { .dim-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 540px)  { .dim-grid { grid-template-columns: 1fr; } }
+    .dim-card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px 18px 18px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      border: 1px solid #e8efe9;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .dim-card .dim-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #2E8B57;
+      text-transform: uppercase;
+    }
+    .dim-card h3 {
+      font-family: Georgia, serif;
+      color: #1a4a2e;
+      margin: 0;
+      font-size: 1.05rem;
+    }
+    .dim-card p {
+      margin: 0;
+      font-size: 0.85rem;
+      color: #555;
+      line-height: 1.45;
+    }
+    .dimensions .footnote {
+      text-align: center;
+      margin: 24px 0 0;
+      font-size: 0.88rem;
+      color: #555;
+    }
+    .dimensions .footnote a { color: #2E8B57; font-weight: 600; }
+
     /* ===== Featured REOI document callout ===== */
     .reoi-callout {
       background: linear-gradient(135deg, #1a4a2e, #2E8B57);
@@ -534,6 +603,42 @@
       </div>
     </div>
   </div>
+
+  <!-- ===== Five Dimensions of a Strong NbCS Project ===== -->
+  <section class="dimensions">
+    <div class="dimensions-inner">
+      <h2>What makes a strong J-USE project</h2>
+      <p class="lead">A J-USE project solves a clearly defined climate problem <strong>through nature — not against it</strong>. Strong applications are multidimensional: each project should connect outcomes across all five.</p>
+      <div class="dim-grid">
+        <div class="dim-card">
+          <span class="dim-label">01 · Climate</span>
+          <h3>The Hazard</h3>
+          <p>The specific climate challenge addressed — drought, flood, heat, sea-level rise, coastal erosion, etc.</p>
+        </div>
+        <div class="dim-card">
+          <span class="dim-label">02 · Nature</span>
+          <h3>The Ecosystem</h3>
+          <p>The natural system the project works with — watershed, coastline, urban canopy, soil, mangrove, native habitat.</p>
+        </div>
+        <div class="dim-card">
+          <span class="dim-label">03 · People &amp; Livelihoods</span>
+          <h3>The Beneficiaries</h3>
+          <p>Who benefits and how vulnerability is distributed — women, youth, low-income, climate-exposed groups, the sectors they operate in.</p>
+        </div>
+        <div class="dim-card">
+          <span class="dim-label">04 · Value</span>
+          <h3>The Economic Logic</h3>
+          <p>How the project creates and captures value — revenue-generating, public-good, or hybrid model. All three are supported.</p>
+        </div>
+        <div class="dim-card">
+          <span class="dim-label">05 · Governance</span>
+          <h3>The Institutional Setup</h3>
+          <p>What keeps it running after the grant ends — systems approach, partnerships, long-term sustainability.</p>
+        </div>
+      </div>
+      <p class="footnote">The form's <strong>Benefit Traceability Matrix</strong> in Section 4 is where you draw these lines explicitly — outcome by outcome. <a href="faq.html#eligibility-scope">Read the full NbCS definition →</a></p>
+    </div>
+  </section>
 
   <!-- ===== What you'll need ===== -->
   <div class="container" style="padding-top: 0;">
