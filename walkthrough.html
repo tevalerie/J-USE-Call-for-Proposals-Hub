@@ -233,9 +233,6 @@
       <strong>Why this example?</strong> The Seaside Wellness Garden &amp; Spa is a fictional Caribbean Eco-Resorts Ltd. project in Westmoreland (Negril). It shows how a <strong>private-sector boutique resort</strong> can use J-USE to fund an NbCS-aligned green-infrastructure retrofit — green roof, native pollinator garden, rainwater harvesting — that simultaneously cools the building, builds biodiversity, captures stormwater, and generates measurable revenue uplift via lower utility costs and eco-tourism positioning. Use it as a structural reference for any <strong>revenue-generating archetype</strong>: hotels, spas, agro-processors, fisheries cooperatives with market models, or hybrid CSO–business ventures. Same form, different financial story.
     </div>
 
-    <div class="insight" data-profile="hotel" hidden>
-      <strong>Heads up:</strong> The 10-section walkthrough below uses the <em>Community Farm</em> example for narrative depth — the J-USE form structure is identical for both archetypes. Where the Hotel/Spa story would differ from the Community Farm at a given step, the most important contrast is in <strong>Section 5 (Value Pathway)</strong>, <strong>Section 7 (Budget &amp; Co-financing)</strong>, and <strong>Section 8 (Sustainability Model)</strong> — switch to the Community profile to read the narrative and refer back to the budget XLSX in Section 7 for the Hotel/Spa numbers.
-    </div>
 
     <!-- Section 1 -->
     <div class="section">
@@ -243,7 +240,12 @@
       <p class="step-meta">~3–5 minutes · Identifies who you are and how to reach you.</p>
 
       <h3>The example</h3>
-      <p>Applicant: <strong>Clarendon Youth Farmers Cooperative</strong> — a Cooperative registered in March 2019 under the Cooperative Societies Act. Active 6-year operating history. Bank account in cooperative's legal name (mandatory). Primary contact: Executive Director (female), age 30. SOE / Government head fields hidden because regType ≠ Government.</p>
+      <div class="profile-content" data-profile="community">
+        <p>Applicant: <strong>Clarendon Youth Farmers Cooperative</strong> — a Cooperative registered in March 2019 under the Cooperative Societies Act. Active 6-year operating history. Bank account in cooperative's legal name (mandatory). Primary contact: Executive Director (female), age 30. SOE / Government head fields hidden because regType ≠ Government.</p>
+      </div>
+      <div class="profile-content" data-profile="hotel" hidden>
+        <p>Applicant: <strong>Caribbean Eco-Resorts Ltd.</strong> — a private limited company registered with the Companies Office of Jamaica in 2014. 12-year operating history. Bank account in company's legal name (mandatory). Primary contact: General Manager (male), age 45. Boutique 28-room resort located in Negril, Westmoreland. SOE / Government head fields hidden because regType = Private Company.</p>
+      </div>
 
       <h3>Why this matters</h3>
       <p>EFJ uses Section 1 to confirm hard eligibility (organisational bank account; recognised legal entity) and to route capacity-building communications. Government / SOE applicants automatically skip the Registration Certificate upload — the form handles that conditionally.</p>
@@ -256,14 +258,27 @@
       <h2>Section 2 — Climate Context &amp; Vulnerability</h2>
       <p class="step-meta">~15–20 minutes · The longest section. Where you make the case.</p>
 
-      <h3>Climate hazards (multi-select)</h3>
-      <p>Drought · Flooding · Heat · Food security</p>
+      <div class="profile-content" data-profile="community">
+        <h3>Climate hazards (multi-select)</h3>
+        <p>Drought · Flooding · Heat · Food security</p>
 
-      <h3>Exposure description</h3>
-      <div class="quote">"Clarendon is Jamaica's most drought-prone parish. Average rainfall has dropped 18% over the past decade, with the May–November season experiencing increasingly erratic patterns. The Rio Minho watershed — on which our 5-ha plot depends — has seen baseflow drops of 30% during dry spells, putting smallholder farms at severe risk."</div>
+        <h3>Exposure description</h3>
+        <div class="quote">"Clarendon is Jamaica's most drought-prone parish. Average rainfall has dropped 18% over the past decade, with the May–November season experiencing increasingly erratic patterns. The Rio Minho watershed — on which our 5-ha plot depends — has seen baseflow drops of 30% during dry spells, putting smallholder farms at severe risk."</div>
 
-      <h3>Vulnerability description</h3>
-      <div class="quote">"Smallholder youth farmers in the May Pen / Mocho corridor are highly vulnerable: 78% rely on rain-fed agriculture as primary income, 64% report income loss of &gt;40% during the 2023–2024 drought."</div>
+        <h3>Vulnerability description</h3>
+        <div class="quote">"Smallholder youth farmers in the May Pen / Mocho corridor are highly vulnerable: 78% rely on rain-fed agriculture as primary income, 64% report income loss of &gt;40% during the 2023–2024 drought."</div>
+      </div>
+
+      <div class="profile-content" data-profile="hotel" hidden>
+        <h3>Climate hazards (multi-select)</h3>
+        <p>Sea-level rise · Coastal erosion · Hurricanes · Heat · Water scarcity</p>
+
+        <h3>Exposure description</h3>
+        <div class="quote">"The Negril coastline has lost approximately 55 metres of beach width since 1990 (NEPA data). Storm surge from Hurricane Beryl (2024) caused JMD 4.2M in damage to the property and disrupted operations for 3 weeks. Average summer temperatures have risen 1.8°C since 2000, increasing AC load on the building by an estimated 22% and pushing utility costs from JMD 380k to JMD 520k per month over five years."</div>
+
+        <h3>Vulnerability description</h3>
+        <div class="quote">"The 18 staff (50% women, all Westmoreland residents) and the resort's ~4,200 annual guests face escalating climate risk: erosion threatens 30% of the beach frontage that drives guest bookings; potable water costs have risen 38% over five years and now compress operating margins; heat-driven cooling load erodes the cost structure year on year."</div>
+      </div>
 
       <div class="insight"><strong>What makes this strong:</strong> Specific numbers (18%, 30%, 78%, 64%), named geography (Rio Minho watershed, May Pen/Mocho corridor), and a direct line from physical exposure → community vulnerability. Generic statements like "climate change is a problem" score poorly.</div>
     </div>
@@ -273,23 +288,45 @@
       <h2>Section 3 — NbCS Interventions &amp; Outcomes</h2>
       <p class="step-meta">~8–10 minutes · The heart of your project design.</p>
 
-      <h3>Primary NbCS interventions</h3>
-      <p>Urban Agroforestry · Slope Agroforestry · Rainwater Harvesting · Community Garden · School Garden</p>
+      <div class="profile-content" data-profile="community">
+        <h3>Primary NbCS interventions</h3>
+        <p>Urban Agroforestry · Slope Agroforestry · Rainwater Harvesting · Community Garden · School Garden</p>
 
-      <h3>Project description</h3>
-      <p>Establishes a 5-ha integrated agroforestry system on a community-owned plot. Components: 2,500 native fruit + timber trees of 15 species at 5m × 5m spacing on contour lines; drip irrigation on the full 5 ha (solar-pumped from rainwater storage); intercropped vegetables for early income; solar-powered post-harvest processing shed; market linkages to 8 schools (public good) + a Kingston farm-to-table chain (revenue); 12-month training programme for 25 youth.</p>
+        <h3>Project description</h3>
+        <p>Establishes a 5-ha integrated agroforestry system on a community-owned plot. Components: 2,500 native fruit + timber trees of 15 species at 5m × 5m spacing on contour lines; drip irrigation on the full 5 ha (solar-pumped from rainwater storage); intercropped vegetables for early income; solar-powered post-harvest processing shed; market linkages to 8 schools (public good) + a Kingston farm-to-table chain (revenue); 12-month training programme for 25 youth.</p>
 
-      <h3>Outcome metrics (the dynamic table)</h3>
-      <table>
-        <tr><th>Outcome</th><th>Baseline</th><th>Expected (12 months)</th><th>How measured</th></tr>
-        <tr><td>Land restored</td><td>0 ha</td><td>5 ha</td><td>GPS survey + drone imagery</td></tr>
-        <tr><td>Trees planted</td><td>0</td><td>2,500</td><td>On-site count + 12-month survival audit</td></tr>
-        <tr><td>Youth farmers trained</td><td>0</td><td>25</td><td>Attendance roster + competency assessment</td></tr>
-        <tr><td>Tree survival rate</td><td>n/a</td><td>≥80%</td><td>Census audit on 100-tree random sample</td></tr>
-        <tr><td>Annual income / farmer (Yr 2)</td><td>JMD 240k</td><td>JMD 480k</td><td>Cooperative income statement + farmer survey</td></tr>
-        <tr><td>Schools supplied</td><td>0</td><td>8</td><td>Signed school supply agreements + delivery logs</td></tr>
-        <tr><td>Carbon sequestration</td><td>0</td><td>60 tCO2e/yr</td><td>IPCC Tier-2 estimation from species + DBH</td></tr>
-      </table>
+        <h3>Outcome metrics (the dynamic table)</h3>
+        <table>
+          <tr><th>Outcome</th><th>Baseline</th><th>Expected (12 months)</th><th>How measured</th></tr>
+          <tr><td>Land restored</td><td>0 ha</td><td>5 ha</td><td>GPS survey + drone imagery</td></tr>
+          <tr><td>Trees planted</td><td>0</td><td>2,500</td><td>On-site count + 12-month survival audit</td></tr>
+          <tr><td>Youth farmers trained</td><td>0</td><td>25</td><td>Attendance roster + competency assessment</td></tr>
+          <tr><td>Tree survival rate</td><td>n/a</td><td>≥80%</td><td>Census audit on 100-tree random sample</td></tr>
+          <tr><td>Annual income / farmer (Yr 2)</td><td>JMD 240k</td><td>JMD 480k</td><td>Cooperative income statement + farmer survey</td></tr>
+          <tr><td>Schools supplied</td><td>0</td><td>8</td><td>Signed school supply agreements + delivery logs</td></tr>
+          <tr><td>Carbon sequestration</td><td>0</td><td>60 tCO2e/yr</td><td>IPCC Tier-2 estimation from species + DBH</td></tr>
+        </table>
+      </div>
+
+      <div class="profile-content" data-profile="hotel" hidden>
+        <h3>Primary NbCS interventions</h3>
+        <p>Urban Greening &amp; Heat Reduction · Water &amp; Flood Management · Coastal / Mangrove Restoration · Native Pollinator Landscaping</p>
+
+        <h3>Project description</h3>
+        <p>Retrofits a 28-room boutique resort with integrated green infrastructure. Components: 300 m² intensive green roof planted with 500 native plants supporting 25+ pollinator species; 100,000 L rainwater harvesting system feeding garden + non-potable resort use; 600 m² native pollinator garden replacing manicured lawns; constructed wetland greywater treatment cell; staff training programme producing an 8-person green-infrastructure maintenance team with 2 industry certifications. The retrofit cools the building, captures stormwater, restores native biodiversity along the property frontage, and produces a measurable demonstration model for replication across the Caribbean tourism sector.</p>
+
+        <h3>Outcome metrics (the dynamic table)</h3>
+        <table>
+          <tr><th>Outcome</th><th>Baseline</th><th>Expected (12 months)</th><th>How measured</th></tr>
+          <tr><td>Green roof installed</td><td>0 m²</td><td>300 m²</td><td>Architect sign-off + post-install photo audit</td></tr>
+          <tr><td>Native plants established</td><td>0</td><td>500</td><td>On-site count + 12-month survival audit</td></tr>
+          <tr><td>Pollinator species observed</td><td>0</td><td>≥25</td><td>Quarterly biodiversity survey by partner ecologist</td></tr>
+          <tr><td>Building cooling effect</td><td>baseline temp</td><td>≥3°C reduction (top floor)</td><td>IoT temperature sensors, monthly logs</td></tr>
+          <tr><td>Rainwater capture</td><td>0 L</td><td>100,000 L storage; 80% rooftop runoff captured</td><td>Flow meter + monthly utility bill comparison</td></tr>
+          <tr><td>Municipal water reduction</td><td>baseline use</td><td>≥50%</td><td>Year-on-year utility bill comparison</td></tr>
+          <tr><td>Staff trained &amp; retained</td><td>0</td><td>8 trained / 100% retention at Month 12</td><td>HEART certification + payroll record</td></tr>
+        </table>
+      </div>
 
       <div class="insight"><strong>Tip:</strong> Outcomes should be specific, measurable, and tied to verifiable methods. "Improve community wellbeing" is not an outcome. "8 schools receiving fresh produce, verified by signed supply agreements" is.</div>
     </div>
@@ -299,20 +336,39 @@
       <h2>Section 4 — Beneficiaries &amp; Social Co-Benefits</h2>
       <p class="step-meta">~10–12 minutes</p>
 
-      <h3>Beneficiaries</h3>
-      <p>25 direct (cooperative member-farmers, 60% women) · 100 indirect (household members) · 960 public (schoolchildren receiving fresh produce)</p>
+      <div class="profile-content" data-profile="community">
+        <h3>Beneficiaries</h3>
+        <p>25 direct (cooperative member-farmers, 60% women) · 100 indirect (household members) · 960 public (schoolchildren receiving fresh produce)</p>
 
-      <h3>Gender analysis (conducted: yes)</h3>
-      <div class="quote">"A 2025 baseline survey of 30 prospective members revealed: women hold 14% of land titles in the catchment but contribute 52% of farm labour; women report market access as their #1 constraint. Programme responds by titling 3 of 5 income streams via women-led producer groups."</div>
+        <h3>Gender analysis (conducted: yes)</h3>
+        <div class="quote">"A 2025 baseline survey of 30 prospective members revealed: women hold 14% of land titles in the catchment but contribute 52% of farm labour; women report market access as their #1 constraint. Programme responds by titling 3 of 5 income streams via women-led producer groups."</div>
 
-      <h3>Benefit Traceability Matrix</h3>
-      <p>Each outcome traced to a sector / target group / mechanism. For example:</p>
-      <table>
-        <tr><th>Outcome</th><th>Sector</th><th>Groups</th><th>Mechanism</th></tr>
-        <tr><td>Stable smallholder income</td><td>Livelihoods &amp; Economy</td><td>Youth, women</td><td>Year-round drip-irrigated production + diversified market channels</td></tr>
-        <tr><td>Climate-resilient land</td><td>Ecosystem Services</td><td>Community</td><td>Trees on contour reduce runoff ~40%, sequester carbon</td></tr>
-        <tr><td>Public-good food supply</td><td>Food Security &amp; Agriculture</td><td>Schoolchildren</td><td>8 schools receive consistent fresh-produce supply at cost</td></tr>
-      </table>
+        <h3>Benefit Traceability Matrix</h3>
+        <p>Each outcome traced to a sector / target group / mechanism. For example:</p>
+        <table>
+          <tr><th>Outcome</th><th>Sector</th><th>Groups</th><th>Mechanism</th></tr>
+          <tr><td>Stable smallholder income</td><td>Livelihoods &amp; Economy</td><td>Youth, women</td><td>Year-round drip-irrigated production + diversified market channels</td></tr>
+          <tr><td>Climate-resilient land</td><td>Ecosystem Services</td><td>Community</td><td>Trees on contour reduce runoff ~40%, sequester carbon</td></tr>
+          <tr><td>Public-good food supply</td><td>Food Security &amp; Agriculture</td><td>Schoolchildren</td><td>8 schools receive consistent fresh-produce supply at cost</td></tr>
+        </table>
+      </div>
+
+      <div class="profile-content" data-profile="hotel" hidden>
+        <h3>Beneficiaries</h3>
+        <p>18 direct (resort staff, 50% women, all Westmoreland residents) · 72 indirect (household members) · ~4,200 public/year (eco-tourism guests experiencing the demonstration site) · 1,200 community members benefitting from coastal stabilisation along the shared frontage</p>
+
+        <h3>Gender analysis (conducted: yes)</h3>
+        <div class="quote">"Pre-baseline survey of all 18 staff: women hold 4 of 9 supervisory roles but are concentrated in housekeeping (88% women) — the lowest wage band. The new green-infrastructure maintenance team is structured with 50% women minimum, including one woman in the technical-lead role earning a HEART/NSTA certification. This moves at least 4 women into the resort's highest skilled-labour wage band by Month 12."</div>
+
+        <h3>Benefit Traceability Matrix</h3>
+        <p>Each outcome traced to a sector / target group / mechanism. For example:</p>
+        <table>
+          <tr><th>Outcome</th><th>Sector</th><th>Groups</th><th>Mechanism</th></tr>
+          <tr><td>Operating cost reduction</td><td>Livelihoods &amp; Economy</td><td>Resort + staff (via profit share)</td><td>50% water reduction + 22% AC load reduction; estimated JMD 2.3M / yr saved</td></tr>
+          <tr><td>Coastal resilience</td><td>Ecosystem Services</td><td>Community + tourism sector</td><td>Native plants stabilise dunes; reduce erosion; restore pollinator habitat</td></tr>
+          <tr><td>Replicable retrofit model</td><td>Knowledge &amp; Learning</td><td>Caribbean tourism sector</td><td>Documented case study + site visits hosted for other Caribbean Hotels Association members</td></tr>
+        </table>
+      </div>
     </div>
 
     <!-- Section 5 -->
@@ -320,14 +376,27 @@
       <h2>Section 5 — Value Proposition &amp; Sustainability</h2>
       <p class="step-meta">~10–12 minutes</p>
 
-      <h3>Pathway: Hybrid (Revenue + Public Goods)</h3>
-      <div class="quote">"Agroforestry provides both monetisable produce (revenue stream — Kingston farm-to-table chain + cooperative market sales) AND public-good outputs (school fresh-food supply at cost, watershed services, microclimate cooling, biodiversity habitat). The hybrid structure ensures the operation reaches break-even within 24 months while preserving non-market public benefits that justify catalytic grant capital."</div>
+      <div class="profile-content" data-profile="community">
+        <h3>Pathway: Hybrid (Revenue + Public Goods)</h3>
+        <div class="quote">"Agroforestry provides both monetisable produce (revenue stream — Kingston farm-to-table chain + cooperative market sales) AND public-good outputs (school fresh-food supply at cost, watershed services, microclimate cooling, biodiversity habitat). The hybrid structure ensures the operation reaches break-even within 24 months while preserving non-market public benefits that justify catalytic grant capital."</div>
 
-      <h3>Hybrid Anchor Partner: Yes — written commitment obtained</h3>
-      <p>Kingston Bistro Co-op Letter of Intent attached, committing to JMD 2.8M/yr produce off-take at fair-trade pricing for 3 years.</p>
+        <h3>Hybrid Anchor Partner: Yes — written commitment obtained</h3>
+        <p>Kingston Bistro Co-op Letter of Intent attached, committing to JMD 2.8M/yr produce off-take at fair-trade pricing for 3 years.</p>
 
-      <h3>Sustainability</h3>
-      <p>By Month 24, cooperative covers 100% of operating costs from market revenue. Drip irrigation has 15-year design life (annual maintenance JMD 80k from sales). Tree replacement (5%/yr) funded from operating reserves. Land tenure secured for 30 years.</p>
+        <h3>Sustainability</h3>
+        <p>By Month 24, cooperative covers 100% of operating costs from market revenue. Drip irrigation has 15-year design life (annual maintenance JMD 80k from sales). Tree replacement (5%/yr) funded from operating reserves. Land tenure secured for 30 years.</p>
+      </div>
+
+      <div class="profile-content" data-profile="hotel" hidden>
+        <h3>Pathway: Revenue-Generating</h3>
+        <div class="quote">"The retrofit pays for itself through measurable operating cost savings: 50% reduction in municipal water use (annual saving ~JMD 1.4M at current rates), 3°C cooling that reduces AC load (annual saving ~JMD 0.9M), and the resort secures 'eco-luxury' positioning that supports a 12–15% premium on room rates within the eco-tourism segment. Payback on the green-infrastructure investment is projected at ~4.2 years; the J-USE catalytic grant is what makes the upfront capital affordable for a boutique operator that cannot finance the full retrofit from retained earnings alone."</div>
+
+        <h3>Hybrid Anchor Partner: Not applicable</h3>
+        <p>Pure revenue-generating model — the resort is its own off-taker. Operating cost savings flow directly to the company P&amp;L. The Caribbean Hotels Association serves as the knowledge-dissemination partner, not a financial off-taker.</p>
+
+        <h3>Sustainability</h3>
+        <p>From Month 12 onwards, operating cost savings cover all green-infrastructure maintenance. Plant replacement (~5%/yr) and IoT sensor maintenance funded from operating budget. 30-year property lease secured; resort owns the retrofit asset. Knowledge product (case study + site-visit programme) shared annually with Caribbean Hotels Association members.</p>
+      </div>
 
       <div class="insight"><strong>What J-USE looks for:</strong> a clear post-grant funding pathway. Grant money should be CATALYTIC — kicking off something that becomes self-sustaining or attracts follow-on capital. "We'll apply for another grant" is not a sustainability plan.</div>
     </div>
@@ -337,19 +406,37 @@
       <h2>Section 6 — Enablers &amp; Implementation</h2>
       <p class="step-meta">~5–7 minutes</p>
 
-      <h3>Enablers (with Have / Need + notes)</h3>
-      <table>
-        <tr><th>Enabler</th><th>Status</th><th>Notes</th></tr>
-        <tr><td>Policy / Regulatory Support</td><td>Already Have</td><td>30-year community-owned lease; cooperative bylaws ratified by Department of Cooperatives.</td></tr>
-        <tr><td>Blended Finance Structure</td><td>Still Need</td><td>J-USE grant + Year-2+ revenue. Concessional loan needed for Year-3 expansion.</td></tr>
-        <tr><td>Technical Capacity Building</td><td>Already Have</td><td>HEART/NSTA-accredited curriculum co-developed; first cohort May 2026.</td></tr>
-        <tr><td>Community Governance</td><td>Already Have</td><td>Elected board (50% women, 100% youth); quarterly assemblies.</td></tr>
-        <tr><td>Market Aggregation Platform</td><td>Still Need</td><td>Kingston Bistro Co-op LOI executed; 8 school agreements in negotiation.</td></tr>
-        <tr><td>Data / Knowledge Systems</td><td>Still Need</td><td>Drone NDVI + IoT moisture sensors planned for Year 2.</td></tr>
-      </table>
+      <div class="profile-content" data-profile="community">
+        <h3>Enablers (with Have / Need + notes)</h3>
+        <table>
+          <tr><th>Enabler</th><th>Status</th><th>Notes</th></tr>
+          <tr><td>Policy / Regulatory Support</td><td>Already Have</td><td>30-year community-owned lease; cooperative bylaws ratified by Department of Cooperatives.</td></tr>
+          <tr><td>Blended Finance Structure</td><td>Still Need</td><td>J-USE grant + Year-2+ revenue. Concessional loan needed for Year-3 expansion.</td></tr>
+          <tr><td>Technical Capacity Building</td><td>Already Have</td><td>HEART/NSTA-accredited curriculum co-developed; first cohort May 2026.</td></tr>
+          <tr><td>Community Governance</td><td>Already Have</td><td>Elected board (50% women, 100% youth); quarterly assemblies.</td></tr>
+          <tr><td>Market Aggregation Platform</td><td>Still Need</td><td>Kingston Bistro Co-op LOI executed; 8 school agreements in negotiation.</td></tr>
+          <tr><td>Data / Knowledge Systems</td><td>Still Need</td><td>Drone NDVI + IoT moisture sensors planned for Year 2.</td></tr>
+        </table>
 
-      <h3>Implementation Structure</h3>
-      <p>Project Lead (Cooperative) · Lead Agronomist (RADA Clarendon) · Training Coordinator (HEART/NSTA) · Finance + M&amp;E (Cooperative + external auditor) · Gender + Safeguarding Focal (Bureau of Gender Affairs) · Anchor Off-taker Liaison (Kingston Bistro Co-op).</p>
+        <h3>Implementation Structure</h3>
+        <p>Project Lead (Cooperative) · Lead Agronomist (RADA Clarendon) · Training Coordinator (HEART/NSTA) · Finance + M&amp;E (Cooperative + external auditor) · Gender + Safeguarding Focal (Bureau of Gender Affairs) · Anchor Off-taker Liaison (Kingston Bistro Co-op).</p>
+      </div>
+
+      <div class="profile-content" data-profile="hotel" hidden>
+        <h3>Enablers (with Have / Need + notes)</h3>
+        <table>
+          <tr><th>Enabler</th><th>Status</th><th>Notes</th></tr>
+          <tr><td>Policy / Regulatory Support</td><td>Already Have</td><td>Building permits secured for green roof + greywater system; NEPA approval for native-plant programme.</td></tr>
+          <tr><td>Blended Finance Structure</td><td>Still Need</td><td>J-USE grant + cash co-financing from resort retained earnings. Commercial loan in negotiation for Year-3 AC efficiency upgrade.</td></tr>
+          <tr><td>Technical Capacity Building</td><td>Still Need</td><td>HEART/NSTA partnership for green-infrastructure maintenance certification — MOU drafted, awaiting signature.</td></tr>
+          <tr><td>Corporate Governance</td><td>Already Have</td><td>Board ratified retrofit; Sustainability Lead role formalised at General Manager level; quarterly board reviews scheduled.</td></tr>
+          <tr><td>Market Aggregation Platform</td><td>Already Have</td><td>Caribbean Hotels Association membership active; eco-tourism positioning launched on resort marketing channels.</td></tr>
+          <tr><td>Data / Knowledge Systems</td><td>Still Need</td><td>IoT moisture + temperature sensors planned for Month 4 to verify outcome metrics.</td></tr>
+        </table>
+
+        <h3>Implementation Structure</h3>
+        <p>Project Lead (General Manager) · Lead Designer (Caribbean Climate-Smart Architects) · Training Coordinator (HEART/NSTA) · Finance + M&amp;E (Resort CFO + external auditor) · Gender + Safeguarding Focal (HR Manager) · Tourism-Sector Liaison (Caribbean Hotels Association).</p>
+      </div>
 
       <div class="insight"><strong>Honesty matters:</strong> Don't claim to "Already Have" what you don't. Reviewers respect "Still Need" with a credible plan over inflated readiness claims.</div>
     </div>
@@ -359,14 +446,27 @@
       <h2>Section 7 — Budget</h2>
       <p class="step-meta">~3–5 minutes (the workbook does the heavy lifting)</p>
 
-      <table>
-        <tr><th>Line</th><th>Amount (JMD)</th><th>%</th></tr>
-        <tr><td>Total Project Cost</td><td>$8,350,000</td><td>100%</td></tr>
-        <tr><td>J-USE Grant Request</td><td>$6,200,000</td><td>74.3%</td></tr>
-        <tr><td>Co-financing — Cash</td><td>$1,200,000</td><td>14.4%</td></tr>
-        <tr><td>Co-financing — In-kind</td><td>$1,200,000</td><td>14.4%</td></tr>
-        <tr><td>Administrative Costs (max 10%)</td><td>$800,000</td><td>9.6% ✓</td></tr>
-      </table>
+      <div class="profile-content" data-profile="community">
+        <table>
+          <tr><th>Line</th><th>Amount (JMD)</th><th>%</th></tr>
+          <tr><td>Total Project Cost</td><td>$8,350,000</td><td>100%</td></tr>
+          <tr><td>J-USE Grant Request</td><td>$6,200,000</td><td>74.3%</td></tr>
+          <tr><td>Co-financing — Cash</td><td>$1,200,000</td><td>14.4%</td></tr>
+          <tr><td>Co-financing — In-kind</td><td>$1,200,000</td><td>14.4%</td></tr>
+          <tr><td>Administrative Costs (max 10%)</td><td>$800,000</td><td>9.6% ✓</td></tr>
+        </table>
+      </div>
+
+      <div class="profile-content" data-profile="hotel" hidden>
+        <table>
+          <tr><th>Line</th><th>Amount (JMD)</th><th>%</th></tr>
+          <tr><td>Total Project Cost</td><td>$11,000,000</td><td>100%</td></tr>
+          <tr><td>J-USE Grant Request</td><td>$7,500,000</td><td>68.2%</td></tr>
+          <tr><td>Co-financing — Cash (resort retained earnings)</td><td>$2,800,000</td><td>25.5%</td></tr>
+          <tr><td>Co-financing — In-kind (staff time, expertise)</td><td>$700,000</td><td>6.3%</td></tr>
+          <tr><td>Administrative Costs (max 10%)</td><td>$1,000,000</td><td>9.1% ✓</td></tr>
+        </table>
+      </div>
 
       <p>Period: July 1, 2026 → June 30, 2027 (12 months).</p>
 
@@ -388,9 +488,17 @@
       <h2>Section 8 — Training Needs Assessment (TNA)</h2>
       <p class="step-meta">~8–10 minutes (16 competency self-ratings)</p>
 
-      <p>The TNA does not affect EOI screening — it helps J-USE design the capacity-building curriculum tailored to your cohort. <strong>Be honest.</strong> The example rates Stakeholder Engagement, Gender, Community = Advanced; M&amp;E, Business, Digital = Beginner.</p>
+      <p>The TNA does not affect EOI screening — it helps J-USE design the capacity-building curriculum tailored to your cohort. <strong>Be honest.</strong></p>
 
-      <p>Selected top capacity-building priorities: NbCS Design Principles · Climate Adaptation Logic · Financial Modelling for Hybrid · M&amp;E Framework · Value Chain Development · NDC Alignment.</p>
+      <div class="profile-content" data-profile="community">
+        <p>The Community Farm example rates <strong>Stakeholder Engagement, Gender, Community = Advanced</strong>; <strong>M&amp;E, Business, Digital = Beginner</strong>.</p>
+        <p>Selected top capacity-building priorities: NbCS Design Principles · Climate Adaptation Logic · Financial Modelling for Hybrid · M&amp;E Framework · Value Chain Development · NDC Alignment.</p>
+      </div>
+
+      <div class="profile-content" data-profile="hotel" hidden>
+        <p>The Hotel/Spa example rates <strong>Stakeholder Engagement, Business, Financial Management = Advanced</strong>; <strong>NbCS Design, Gender Analysis, M&amp;E = Beginner</strong>.</p>
+        <p>Selected top capacity-building priorities: NbCS Design Principles · Green Building Certifications · Climate Risk Disclosure · M&amp;E Framework · Eco-Tourism Marketing · Carbon Accounting.</p>
+      </div>
 
       <p>Preferred learning formats: in-person workshops · case studies · peer learning circles · live virtual sessions.</p>
     </div>
@@ -455,7 +563,7 @@
           b.classList.toggle('active', b === btn);
         });
         // Only swap content blocks — exclude the toggle buttons themselves
-        document.querySelectorAll('.hero[data-profile], .quick-facts[data-profile], .insight[data-profile]').forEach(function (el) {
+        document.querySelectorAll('.hero[data-profile], .quick-facts[data-profile], .insight[data-profile], .profile-content[data-profile]').forEach(function (el) {
           el.hidden = el.getAttribute('data-profile') !== profile;
         });
         // Smooth-scroll the hero into view so the user sees the change
