@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sample Application Form — Hybrid Community Farm | J-USE REOI 2026</title>
-  <meta name="description" content="A complete worked example of a strong J-USE application: the Clarendon Youth Farmers Cooperative's Hybrid Community Agroforestry & Market Garden project. See what good looks like before you write your own." />
+  <title>Sample Applications — Community &amp; Private Archetypes | J-USE REOI 2026</title>
+  <meta name="description" content="Two complete worked examples of strong J-USE applications: a community/NGO hybrid agroforestry project AND a private-sector revenue-generating eco-resort retrofit. Toggle between profiles to see what good looks like for either archetype before you write your own." />
   <style>
     *, *::before, *::after { box-sizing: border-box; }
     body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: #1a1a1a; background: #f5f9f7; margin: 0; line-height: 1.6; }
@@ -125,6 +125,53 @@
 
     .footer { background: #1a2e1f; color: rgba(255,255,255,0.7); padding: 28px 24px; text-align: center; margin-top: 48px; font-size: 0.9rem; }
     .footer a { color: rgba(255,255,255,0.85); text-decoration: none; margin: 0 8px; }
+
+    /* Profile toggle */
+    .profile-toggle {
+      background: #fff;
+      padding: 14px 20px;
+      border-bottom: 1px solid #e0e8e3;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .profile-toggle-label {
+      color: #555;
+      font-size: 0.88rem;
+      font-weight: 600;
+      margin-right: 4px;
+    }
+    .profile-toggle button {
+      background: white;
+      border: 2px solid #e8efe9;
+      color: #1a4a2e;
+      padding: 8px 18px;
+      border-radius: 24px;
+      font-weight: 600;
+      font-size: 0.88rem;
+      cursor: pointer;
+      transition: all 0.15s;
+      font-family: inherit;
+    }
+    .profile-toggle button:hover { border-color: #2E8B57; background: #f5f9f7; }
+    .profile-toggle button.active { background: #2E8B57; color: white; border-color: #2E8B57; }
+    [data-profile][hidden] { display: none !important; }
+    .budget-downloads { display: flex; gap: 12px; flex-wrap: wrap; margin: 14px 0; }
+    .budget-downloads a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #1F7244;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.92rem;
+    }
+    .budget-downloads a:hover { background: #1a4a2e; }
   </style>
 </head>
 <body>
@@ -142,22 +189,52 @@
     </div>
   </nav>
 
-  <section class="hero">
-    <span class="badge">Sample Application Form — Illustrative Only</span>
+  <!-- Profile picker — toggles between Community/NGO and Private/Revenue archetypes -->
+  <div class="profile-toggle">
+    <span class="profile-toggle-label">View as:</span>
+    <button data-profile="community" class="active">🌱 Community / NGO Archetype</button>
+    <button data-profile="hotel">🏨 Private / Revenue-Generating Archetype</button>
+  </div>
+
+  <!-- ===== Profile: Community / NGO ===== -->
+  <section class="hero" data-profile="community">
+    <span class="badge">Sample Application — Community / NGO Archetype</span>
     <h1>Hybrid Community Agroforestry &amp; Market Garden — Clarendon</h1>
-    <p class="subtitle">How a fictional but realistic application would tell its story across all 10 sections of the J-USE REOI form.</p>
+    <p class="subtitle">How a fictional but realistic CSO application would tell its story across all 10 sections of the J-USE REOI form.</p>
   </section>
 
-  <div class="quick-facts">
+  <div class="quick-facts" data-profile="community">
     <div class="fact"><div class="num">JMD $8.35M</div><div class="lbl">Total Cost</div></div>
     <div class="fact"><div class="num">JMD $6.2M</div><div class="lbl">J-USE Request</div></div>
     <div class="fact"><div class="num">5 ha</div><div class="lbl">Land Restored</div></div>
     <div class="fact"><div class="num">25</div><div class="lbl">Youth Trained</div></div>
   </div>
 
+  <!-- ===== Profile: Private / Revenue-Generating ===== -->
+  <section class="hero" data-profile="hotel" hidden>
+    <span class="badge">Sample Application — Private / Revenue-Generating Archetype</span>
+    <h1>Seaside Wellness Garden &amp; Spa — Green Infrastructure Retrofit</h1>
+    <p class="subtitle">How a private-sector boutique resort with a revenue-generating model would tell its story across all 10 sections of the J-USE REOI form.</p>
+  </section>
+
+  <div class="quick-facts" data-profile="hotel" hidden>
+    <div class="fact"><div class="num">JMD $11M</div><div class="lbl">Total Cost</div></div>
+    <div class="fact"><div class="num">JMD $7.5M</div><div class="lbl">J-USE Request</div></div>
+    <div class="fact"><div class="num">300 m²</div><div class="lbl">Green Roof + Rainwater</div></div>
+    <div class="fact"><div class="num">50%</div><div class="lbl">Water Use Reduction</div></div>
+  </div>
+
   <div class="container">
-    <div class="insight" style="margin-top: 0;">
+    <div class="insight" style="margin-top: 0;" data-profile="community">
       <strong>Why this example?</strong> The Hybrid Community Farm is built around the J-USE programme's design priorities: a clear nature-based intervention, climate additionality, gender + youth focus, hybrid revenue + public-good model, demonstrable scaling pathway. Use it as a structural reference — never copy the content. Reviewers spot duplicated examples instantly.
+    </div>
+
+    <div class="insight" style="margin-top: 0;" data-profile="hotel" hidden>
+      <strong>Why this example?</strong> The Seaside Wellness Garden &amp; Spa is a fictional Caribbean Eco-Resorts Ltd. project in Westmoreland (Negril). It shows how a <strong>private-sector boutique resort</strong> can use J-USE to fund an NbCS-aligned green-infrastructure retrofit — green roof, native pollinator garden, rainwater harvesting — that simultaneously cools the building, builds biodiversity, captures stormwater, and generates measurable revenue uplift via lower utility costs and eco-tourism positioning. Use it as a structural reference for any <strong>revenue-generating archetype</strong>: hotels, spas, agro-processors, fisheries cooperatives with market models, or hybrid CSO–business ventures. Same form, different financial story.
+    </div>
+
+    <div class="insight" data-profile="hotel" hidden>
+      <strong>Heads up:</strong> The 10-section walkthrough below uses the <em>Community Farm</em> example for narrative depth — the J-USE form structure is identical for both archetypes. Where the Hotel/Spa story would differ from the Community Farm at a given step, the most important contrast is in <strong>Section 5 (Value Pathway)</strong>, <strong>Section 7 (Budget &amp; Co-financing)</strong>, and <strong>Section 8 (Sustainability Model)</strong> — switch to the Community profile to read the narrative and refer back to the budget XLSX in Section 7 for the Hotel/Spa numbers.
     </div>
 
     <!-- Section 1 -->
@@ -294,12 +371,13 @@
       <p>Period: July 1, 2026 → June 30, 2027 (12 months).</p>
 
       <div style="background: #e8f4fd; border-left: 4px solid #2196F3; padding: 18px 22px; border-radius: 6px; margin: 18px 0;">
-        <h3 style="color: #1565C0; margin-top: 0; text-transform: none; letter-spacing: 0; font-family: Georgia, serif; font-size: 1.05rem;">📊 Download the example budget workbook</h3>
-        <p>See exactly how the sample application form fills in the J-USE NbCS Budget Template — every category, every linked result, every SMART indicator. Use it as a structural reference (don't copy figures — your project's numbers are its own).</p>
-        <p style="margin-top: 14px;">
-          <a href="J-USE_Example_Hybrid_CommunityFarm_FINAL.xlsx" download style="display: inline-block; background: #1F7244; color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 0.92rem;">⬇ Download Sample Application Budget (Excel, 50 KB)</a>
-        </p>
-        <p style="font-size: 0.85rem; color: #555; margin-top: 10px;">Tip: open it side-by-side with the blank <a href="https://www.efj.org.jm/wp-content/uploads/2026/04/J-USE_NbCS_Budget_Template_FINAL_Neutral_Finaled.xlsx" target="_blank">J-USE NbCS Budget Template</a> as you fill in your own.</p>
+        <h3 style="color: #1565C0; margin-top: 0; text-transform: none; letter-spacing: 0; font-family: Georgia, serif; font-size: 1.05rem;">📊 Download the example budget workbooks</h3>
+        <p>Two filled-in examples of the J-USE NbCS Budget Template — one for each archetype. Every category, linked result, and SMART indicator is shown. Use them as structural references (don't copy figures — your project's numbers are its own).</p>
+        <div class="budget-downloads">
+          <a href="J-USE_Example_Hybrid_CommunityFarm_FINAL.xlsx" download>🌱 Community Farm Budget (XLSX, 50 KB)</a>
+          <a href="J-USE_Example_Hotel_Spa_Revenue_FINAL.xlsx" download>🏨 Hotel/Spa Revenue Budget (XLSX, 29 KB)</a>
+        </div>
+        <p style="font-size: 0.85rem; color: #555; margin-top: 10px;">Tip: open either side-by-side with the blank <a href="https://www.efj.org.jm/wp-content/uploads/2026/04/J-USE_NbCS_Budget_Template_FINAL_Neutral_Finaled.xlsx" target="_blank">J-USE NbCS Budget Template</a> as you fill in your own.</p>
       </div>
 
       <div class="insight"><strong>Critical:</strong> Use the J-USE NbCS Budget Template (Excel). Admin costs must be ≤10% of total. Currency = JMD only. The template auto-validates.</div>
@@ -367,5 +445,23 @@
       <a href="https://tevalerie.github.io/j-use-eoi-form-/J-USE_REOI_2026_Application_Form.html">Apply</a>
     </p>
   </footer>
+
+  <script>
+    // Profile toggle — swap visible hero/quick-facts/insight blocks for either archetype
+    document.querySelectorAll('.profile-toggle button').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var profile = btn.getAttribute('data-profile');
+        document.querySelectorAll('.profile-toggle button').forEach(function (b) {
+          b.classList.toggle('active', b === btn);
+        });
+        // Only swap content blocks — exclude the toggle buttons themselves
+        document.querySelectorAll('.hero[data-profile], .quick-facts[data-profile], .insight[data-profile]').forEach(function (el) {
+          el.hidden = el.getAttribute('data-profile') !== profile;
+        });
+        // Smooth-scroll the hero into view so the user sees the change
+        document.querySelector('.hero[data-profile="' + profile + '"]').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+  </script>
 </body>
 </html>
