@@ -223,6 +223,137 @@
     .checklist li.optional::before { content: "○"; color: #888; }
     .checklist li small { color: #777; display: block; margin-top: 2px; }
 
+    /* ===== Watch & Read sessions ===== */
+    .sessions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      margin-top: 14px;
+    }
+    @media (max-width: 760px) { .sessions { grid-template-columns: 1fr; } }
+    .session-card {
+      background: white;
+      border-radius: 12px;
+      padding: 0;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      border: 1px solid #e8efe9;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .session-thumb {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      background: #1a2e1f no-repeat center / cover;
+      cursor: pointer;
+      overflow: hidden;
+    }
+    .session-thumb::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 60%, rgba(0,0,0,0.45));
+    }
+    .session-thumb .play {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 68px;
+      height: 48px;
+      background: rgba(33, 33, 33, 0.85);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.15s;
+    }
+    .session-thumb:hover .play { background: #ff0000; }
+    .session-thumb .play::after {
+      content: "";
+      border-style: solid;
+      border-width: 10px 0 10px 16px;
+      border-color: transparent transparent transparent #ffffff;
+      margin-left: 4px;
+    }
+    .session-thumb iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    .session-body { padding: 20px 24px 22px; }
+    .session-tag {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #2E8B57;
+      text-transform: uppercase;
+    }
+    .session-body h3 {
+      font-family: Georgia, serif;
+      color: #1a4a2e;
+      margin: 4px 0 6px;
+      font-size: 1.2rem;
+    }
+    .session-meta {
+      color: #777;
+      font-size: 0.85rem;
+      margin: 0 0 10px;
+    }
+    .session-body p { margin: 0 0 14px; font-size: 0.95rem; }
+    .session-watch {
+      display: inline-block;
+      color: #c0392b;
+      font-weight: 600;
+      text-decoration: none;
+      margin-bottom: 16px;
+      font-size: 0.92rem;
+    }
+    .session-watch:hover { text-decoration: underline; }
+    .session-materials {
+      border-top: 1px solid #eef3f0;
+      padding-top: 14px;
+      margin-top: auto;
+    }
+    .session-materials h4 {
+      margin: 0 0 8px;
+      font-size: 0.78rem;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: #555;
+    }
+    .session-materials ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .session-materials li {
+      padding: 6px 0;
+      border-bottom: 1px solid #f4f8f5;
+      font-size: 0.9rem;
+    }
+    .session-materials li:last-child { border-bottom: 0; }
+    .session-materials a {
+      color: #1a4a2e;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .session-materials a:hover { color: #2E8B57; }
+    .session-materials .doc-icon {
+      background: #c0392b;
+      color: white;
+      padding: 2px 7px;
+      border-radius: 3px;
+      font-size: 10px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .session-materials .doc-meta { color: #888; font-size: 0.78rem; margin-left: 4px; }
+
     /* ===== Process timeline ===== */
     .process {
       display: grid;
@@ -384,7 +515,7 @@
   </div>
 
   <!-- ===== Templates and guides ===== -->
-  <div class="container" style="padding-top: 0;">
+  <div class="container" id="templates" style="padding-top: 0;">
     <h2 class="section-title">Templates &amp; guides</h2>
     <p class="section-sub">Download the templates, fill them out offline, then attach during your application.</p>
     <div class="grid-2">
@@ -405,6 +536,59 @@
           <li><span class="doc-icon xlsx">XLSX</span><a href="J-USE_Example_Hybrid_CommunityFarm_FINAL.xlsx" download>Sample Application Budget Workbook — Hybrid Community Farm</a></li>
         </ul>
       </div>
+    </div>
+  </div>
+
+  <!-- ===== Watch & Read sessions ===== -->
+  <div class="container" style="padding-top: 0;">
+    <h2 class="section-title">Watch &amp; Read — J-USE 2026 Sessions</h2>
+    <p class="section-sub">Catch up on the recorded sessions, then download the supporting materials.</p>
+    <div class="sessions">
+
+      <!-- Sensitisation (chronologically first) -->
+      <article class="session-card">
+        <div class="session-thumb" data-yt="4xZUJ558GkA" style="background-image: url('https://i.ytimg.com/vi/4xZUJ558GkA/maxresdefault.jpg');">
+          <span class="play" aria-hidden="true"></span>
+        </div>
+        <div class="session-body">
+          <div class="session-tag">Sensitisation Session · March 2026</div>
+          <h3>NbCS Fundamentals</h3>
+          <p>A general primer on Nature-based Climate Solutions: what they are, why they matter, how they create value and attract finance.</p>
+          <a class="session-watch" href="https://www.youtube.com/watch?v=4xZUJ558GkA" target="_blank" rel="noopener">▶ Watch on YouTube</a>
+          <div class="session-materials">
+            <h4>Supporting Materials</h4>
+            <ul>
+              <li><a href="materials/01-J-USE-Sensitisation-Session-NbS.pdf" target="_blank"><span class="doc-icon">PDF</span>J-USE Sensitisation — NbS Overview <span class="doc-meta">(6.4 MB)</span></a></li>
+              <li><a href="materials/02-From-Grants-to-Systems.pdf" target="_blank"><span class="doc-icon">PDF</span>From Grants to Systems — NbS Value, Finance &amp; Impact <span class="doc-meta">(2.4 MB)</span></a></li>
+              <li><a href="materials/03-Designing-for-Impact.pdf" target="_blank"><span class="doc-icon">PDF</span>Designing for Impact <span class="doc-meta">(0.9 MB)</span></a></li>
+              <li><a href="materials/04-Stakeholder-Engagement-Co-Design.pdf" target="_blank"><span class="doc-icon">PDF</span>Stakeholder Engagement &amp; Co-Design <span class="doc-meta">(4.9 MB)</span></a></li>
+              <li><a href="materials/05-Gender-and-Social-Inclusion.pdf" target="_blank"><span class="doc-icon">PDF</span>Gender &amp; Social Inclusion in Urban NbS Projects <span class="doc-meta">(3.6 MB)</span></a></li>
+              <li><a href="materials/06-Sensitisation-Sessions-for-the-Call.pdf" target="_blank"><span class="doc-icon">PDF</span>Sensitisation Sessions for the Call <span class="doc-meta">(0.3 MB)</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- Call for Proposals 2026 Information Session -->
+      <article class="session-card">
+        <div class="session-thumb" data-yt="nG2l9BPUYK8" style="background-image: url('https://i.ytimg.com/vi/nG2l9BPUYK8/maxresdefault.jpg');">
+          <span class="play" aria-hidden="true"></span>
+        </div>
+        <div class="session-body">
+          <div class="session-tag">Call for Proposals 2026 · April 14, 2026</div>
+          <h3>Information Session</h3>
+          <p>Walks through the J-USE 2026 call: eligibility, timeline, application process, deadlines, and what reviewers look for.</p>
+          <a class="session-watch" href="https://www.youtube.com/watch?v=nG2l9BPUYK8" target="_blank" rel="noopener">▶ Watch on YouTube</a>
+          <div class="session-materials">
+            <h4>Supporting Materials</h4>
+            <ul>
+              <li><a href="materials/07-Information-Session-April-14.pdf" target="_blank"><span class="doc-icon">PDF</span>J-USE REOI Information Session — April 14, 2026 <span class="doc-meta">(5.9 MB)</span></a></li>
+            </ul>
+            <p style="margin: 12px 0 0; font-size: 0.85rem; color: #555;">For the actual application templates and end-user guides, see <a href="#templates" style="color: #2E8B57; font-weight: 600;">Templates &amp; Guides</a> above.</p>
+          </div>
+        </div>
+      </article>
+
     </div>
   </div>
 
@@ -488,6 +672,19 @@
       tick();
       setInterval(tick, 60000);
     })();
+
+    // Lite-embed for YouTube thumbnails — only loads the player on click
+    document.querySelectorAll('.session-thumb[data-yt]').forEach(function (el) {
+      el.addEventListener('click', function () {
+        var id = el.getAttribute('data-yt');
+        if (!id || el.querySelector('iframe')) return;
+        var iframe = document.createElement('iframe');
+        iframe.setAttribute('src', 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0');
+        iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+        iframe.setAttribute('allowfullscreen', '');
+        el.appendChild(iframe);
+      });
+    });
   </script>
 </body>
 </html>
