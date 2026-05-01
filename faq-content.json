@@ -1,0 +1,153 @@
+{
+  "_comment": "Edit this file to add / change / remove FAQ entries. The faq.html page reads it on every page load. Categories are free-text — group answers however helps applicants.",
+  "lastUpdated": "2026-04-30",
+  "categories": [
+    {
+      "name": "Eligibility & Scope",
+      "items": [
+        {
+          "q": "Which parishes are eligible for J-USE 2026?",
+          "a": "Seven parishes: Kingston & St. Andrew, St. Catherine, Clarendon, St. Mary, St. Thomas, Westmoreland, and Hanover. Projects in other parishes can register for the future pipeline via the <a href='eligibility-check.html'>eligibility check</a>."
+        },
+        {
+          "q": "Can individuals or unregistered groups apply?",
+          "a": "No. J-USE requires a registered organisation (or an informal CBO with documented community recognition) AND an organisational bank account. Individuals with strong NbCS ideas should partner with a registered NGO or cooperative to host the project."
+        },
+        {
+          "q": "What counts as a Nature-based Climate Solution (NbCS)?",
+          "a": "Projects that protect, restore, or sustainably manage ecosystems to address climate change while delivering biodiversity and human-wellbeing benefits. Examples: agroforestry, mangrove restoration, bioswales, urban tree canopy, coastal protection, water harvesting, climate-smart farming, soil restoration. The IUCN Global Standard for NbCS is the reference framework."
+        },
+        {
+          "q": "Is there a minimum or maximum project budget?",
+          "a": "There's no minimum — request whatever your project needs. The grant cap is JMD $15M per project. Larger projects can still apply if they identify confirmed co-financing partners."
+        },
+        {
+          "q": "Can the project run longer than 12 months?",
+          "a": "The J-USE-funded portion of the project (primary activities) must be deliverable within 12 months. Long-term maintenance plans are required separately and demonstrate sustainability beyond the grant period."
+        }
+      ]
+    },
+    {
+      "name": "Applying",
+      "items": [
+        {
+          "q": "How long does the application take?",
+          "a": "About 45 minutes if you have your supporting documents ready. The form auto-saves every 30 seconds, and you can download a draft as JSON to resume later — even on a different computer."
+        },
+        {
+          "q": "What documents do I need to upload?",
+          "a": "Most applicants upload 4 documents: (1) Letter of Intent and Authorisation, (2) Detailed Budget Breakdown using the J-USE template, (3) Organisation Registration Certificate, (4) Organisational Capacity / Previous Work (max 3 pages). Government / SOE / informal CBO applicants skip the Registration Certificate (3 documents)."
+        },
+        {
+          "q": "What's the sample application form for?",
+          "a": "It's a fictional but complete application for the 'Hybrid Community Agroforestry & Market Garden — Clarendon' project. <a href='walkthrough.html'>Read the sample application form</a> or click <strong>📋 See Sample Application Form</strong> at the top of the form to load it into the form fields. You can see what good looks like, then clear and replace with your own content."
+        },
+        {
+          "q": "What if I lose my draft?",
+          "a": "The form auto-saves to your browser every 30 seconds. You can also click <strong>⬇ Download Draft (.json)</strong> to save a backup file you can re-load on any device. Apps like browser cleaners can wipe localStorage, so the JSON download is your safety net."
+        },
+        {
+          "q": "Can I edit my application after submitting?",
+          "a": "Once submitted you'll receive a JUSE-2026-XXXXXX reference number. To request edits, email <a href='mailto:grants@efj.org.jm'>grants@efj.org.jm</a> with your reference number BEFORE the May 3 deadline. After the deadline, the application is locked for review."
+        }
+      ]
+    },
+    {
+      "name": "Submission Process",
+      "items": [
+        {
+          "q": "What happens when I click Submit?",
+          "a": "A 3-step modal opens: (1) Save your application as PDF — opens your browser's print dialog, you choose 'Save as PDF', the file lands in your Downloads. (2) Re-attach that PDF to the submission. (3) Upload completes — you see your JUSE-2026-XXXXXX reference number on screen and receive a confirmation email with the same PDF attached."
+        },
+        {
+          "q": "Why do I have to save the PDF myself?",
+          "a": "So you have a permanent local copy of exactly what EFJ receives — and so the same camera-ready PDF flows into your email confirmation, the grants team's notification, and EFJ's records. One file, one source of truth."
+        },
+        {
+          "q": "What happens if my submission fails?",
+          "a": "The form has a Plan B fallback modal that opens automatically. It lets you (a) download your application as PDF, (b) email it directly to grants@efj.org.jm, or (c) retry the online submission. Your work is preserved in your browser's local storage either way."
+        },
+        {
+          "q": "When will I hear back?",
+          "a": "Initial screening within 5 business days of submission. All EOI applicants are invited to four virtual webinars on <strong>May 13–14 and May 20–21, 2026</strong>. Full proposal invitations go out in late May, with the Proposal Writing Workshop following (dates TBD). Grant awards announced in June 2026."
+        }
+      ]
+    },
+    {
+      "name": "Funding & Co-financing",
+      "items": [
+        {
+          "q": "Is co-financing required?",
+          "a": "In-kind co-financing is mandatory (volunteer time, equipment, land use, in-kind staff time). Cash co-financing is optional but strengthens an application — it demonstrates other partners share your confidence in the project."
+        },
+        {
+          "q": "What can in-kind co-financing include?",
+          "a": "Anything you can put a credible monetary value on: volunteer hours at a stated hourly rate, donated land, equipment lent at no cost, contributed staff time, partner organisation contributions of materials or services, etc. Document each item in the budget template."
+        },
+        {
+          "q": "Are administrative costs allowed?",
+          "a": "Yes — up to a maximum of 10% of your total project cost. The J-USE Budget Template auto-validates this cap and flags submissions that exceed it."
+        },
+        {
+          "q": "Can J-USE money be used for capital infrastructure?",
+          "a": "Yes — equipment, irrigation systems, monitoring devices, post-harvest processing facilities, etc. are all eligible if they directly support the NbCS intervention. Land purchase is generally not eligible; long-term lease or community-owned arrangements are preferred."
+        }
+      ]
+    },
+    {
+      "name": "Webinars & Pipeline",
+      "items": [
+        {
+          "q": "What are the webinars?",
+          "a": "Four virtual webinars held <strong>May 13–14 and May 20–21, 2026</strong>, covering: (1) Nature-based Climate Solutions fundamentals + IUCN criteria, (2) Value chain modelling + service models, (3) Theory of change + value chain analysis + gender/vulnerability disaggregation, (4) Sustainability mechanisms + adaptive management. Open to all EOI applicants — recordings are made available afterwards."
+        },
+        {
+          "q": "What is the 'future pipeline'?",
+          "a": "EFJ is moving from one-off grant-making to portfolio management. Strong applicants who don't fit the current call (e.g. wrong parish, project too early-stage) are added to a pipeline EFJ revisits for future calls, partnerships, and matchmaking with other funders. The eligibility-check tool feeds this pipeline."
+        },
+        {
+          "q": "Will EFJ help me write my proposal?",
+          "a": "Not for the EOI stage — that's intentionally lightweight. All EOI applicants are invited to the four May webinars (May 13–14 and 20–21). Invited full-proposal applicants then attend a dedicated <strong>Proposal Writing Workshop</strong> (dates TBD — communicated by email) for hands-on support before submitting their full proposal."
+        }
+      ]
+    },
+    {
+      "name": "Technical Issues",
+      "items": [
+        {
+          "q": "The form won't submit — what do I do?",
+          "a": "The Plan B modal will open automatically and offer to (a) download your application as PDF, (b) email it directly to grants@efj.org.jm. Your work is preserved either way. If the modal doesn't appear, take a screenshot of the error and email <a href='mailto:grants@efj.org.jm'>grants@efj.org.jm</a> with subject 'Submission failure' and we'll respond within 24 hours."
+        },
+        {
+          "q": "I lost my browser tab mid-application — is my work lost?",
+          "a": "No. The form auto-saves to your browser's local storage every 30 seconds. Re-open the form (same browser, same device) and a prompt will offer to restore your draft. For extra safety, click <strong>⬇ Download Draft (.json)</strong> periodically — that file works on any device."
+        },
+        {
+          "q": "Can I use a phone or tablet?",
+          "a": "The form works on phones and tablets but the experience is much better on a laptop or desktop — many fields require typing longer paragraphs. We recommend laptop / desktop for the actual writing, then submit from any device."
+        },
+        {
+          "q": "What browser should I use?",
+          "a": "Chrome, Safari, Edge, or Firefox — all current versions work. Internet Explorer is not supported. If the print preview doesn't open at the submission step, your browser may be blocking pop-ups — temporarily allow pop-ups for this site and try again."
+        }
+      ]
+    },
+    {
+      "name": "After Submission",
+      "items": [
+        {
+          "q": "What happens next?",
+          "a": "Your submission lands in EFJ's grants portal automatically. The grants team reviews within 5 business days. All EOI applicants are invited to the four virtual webinars on <strong>May 13–14 and 20–21, 2026</strong>. Successful EOI applicants are then invited to develop a full proposal in late May, including a dedicated Proposal Writing Workshop (dates TBD). Unsuccessful applicants receive feedback and can opt into the future pipeline."
+        },
+        {
+          "q": "Will I get a copy of my submission?",
+          "a": "Yes — three places: (1) the camera-ready PDF you saved at submission, (2) the email confirmation with that same PDF attached, (3) on request from grants@efj.org.jm using your reference number."
+        },
+        {
+          "q": "How is my data protected?",
+          "a": "Submissions are stored in EFJ's secure Google Workspace environment (Drive + Sheets) with access limited to the J-USE grants team. Data is used only for the assessment process and EFJ's internal portfolio management. Not shared with third parties without your consent."
+        }
+      ]
+    }
+  ]
+}

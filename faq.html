@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frequently Asked Questions — J-USE REOI 2026</title>
+  <meta name="description" content="Common questions about the J-USE Nature-based Climate Solutions 2026 application: eligibility, documents, budget, timeline, technical support." />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: #1a1a1a; background: #f5f9f7; margin: 0; line-height: 1.55; }
+
+    .topnav { background: #fff; border-bottom: 1px solid #e0e8e3; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    .topnav-brand { display: flex; align-items: center; gap: 12px; font-weight: 700; color: #1a4a2e; text-decoration: none; }
+    .topnav-brand img { height: 36px; }
+    .topnav-links a { color: #1a4a2e; text-decoration: none; padding: 8px 14px; border-radius: 6px; font-weight: 600; font-size: 14px; }
+    .topnav-links a:hover { background: #e8f5e9; }
+    .topnav-links a.cta { background: linear-gradient(135deg, #2E8B57, #4169E1); color: white; }
+
+    .hero { background: linear-gradient(135deg, #2E8B57 0%, #4169E1 100%); color: white; padding: 48px 24px; text-align: center; }
+    .hero h1 { font-family: Georgia, serif; margin: 0 auto 10px; font-size: 2.1rem; max-width: 720px; }
+    .hero .subtitle { max-width: 600px; margin: 0 auto; opacity: 0.95; }
+
+    .container { max-width: 880px; margin: 32px auto; padding: 0 24px 48px; }
+
+    /* Search bar */
+    .search-box {
+      position: relative;
+      margin-bottom: 28px;
+    }
+    .search-box input {
+      width: 100%;
+      padding: 14px 18px 14px 48px;
+      border: 2px solid #e8efe9;
+      border-radius: 10px;
+      font-size: 16px;
+      font-family: inherit;
+      background: white url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232E8B57' stroke-width='2' stroke-linecap='round'><circle cx='11' cy='11' r='7'/><path d='m21 21-4.3-4.3'/></svg>") 14px center / 22px no-repeat;
+      transition: border-color 0.15s;
+    }
+    .search-box input:focus { outline: 0; border-color: #2E8B57; }
+    .search-stats { color: #777; font-size: 0.85rem; margin-top: 8px; padding-left: 4px; min-height: 18px; }
+
+    /* Category jumper */
+    .category-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 28px;
+    }
+    .category-nav a {
+      background: white;
+      color: #1a4a2e;
+      border: 1px solid #e8efe9;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.15s;
+    }
+    .category-nav a:hover { background: #e8f5e9; border-color: #2E8B57; }
+
+    /* Category sections */
+    .category {
+      background: white;
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin-bottom: 18px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    }
+    .category h2 {
+      font-family: Georgia, serif;
+      color: #1a4a2e;
+      margin: 0 0 16px;
+      font-size: 1.3rem;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #e8efe9;
+    }
+
+    /* Accordion item */
+    .qa {
+      border-bottom: 1px solid #eef3f0;
+      padding: 0;
+    }
+    .qa:last-child { border-bottom: 0; }
+    .qa.hidden { display: none; }
+    .qa summary {
+      cursor: pointer;
+      padding: 16px 4px 16px 36px;
+      font-weight: 600;
+      color: #1a1a1a;
+      font-size: 0.97rem;
+      list-style: none;
+      position: relative;
+      transition: color 0.15s;
+    }
+    .qa summary::-webkit-details-marker { display: none; }
+    .qa summary::before {
+      content: "+";
+      position: absolute;
+      left: 6px;
+      top: 14px;
+      width: 22px;
+      height: 22px;
+      background: #2E8B57;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 1;
+      transition: transform 0.2s;
+    }
+    .qa[open] summary::before { content: "−"; }
+    .qa summary:hover { color: #2E8B57; }
+    .qa .answer {
+      padding: 0 4px 18px 36px;
+      color: #444;
+      line-height: 1.65;
+      font-size: 0.95rem;
+    }
+    .qa .answer a { color: #4169E1; }
+
+    .empty {
+      text-align: center;
+      padding: 48px 24px;
+      color: #888;
+    }
+    .empty.show { display: block; }
+    .empty:not(.show) { display: none; }
+
+    /* Help block */
+    .help-block {
+      background: #fff8e1;
+      border-left: 4px solid #f0ad4e;
+      padding: 20px 24px;
+      border-radius: 8px;
+      margin-top: 24px;
+    }
+    .help-block h3 { margin: 0 0 8px; color: #b56500; }
+    .help-block a { color: #b56500; font-weight: 600; }
+
+    .footer { background: #1a2e1f; color: rgba(255,255,255,0.7); padding: 28px 24px; text-align: center; margin-top: 48px; font-size: 0.9rem; }
+    .footer a { color: rgba(255,255,255,0.85); text-decoration: none; margin: 0 8px; }
+    .last-updated { font-size: 0.78rem; color: #888; text-align: center; margin-top: 28px; }
+  </style>
+</head>
+<body>
+
+  <nav class="topnav">
+    <a href="index.html" class="topnav-brand">
+      <img src="https://res.cloudinary.com/dflgxstih/image/upload/v1774363916/logo_lockup_2_1_y8avql.png" alt="EFJ J-USE Logo" />
+      <span>J-USE REOI 2026</span>
+    </a>
+    <div class="topnav-links">
+      <a href="index.html">← Overview</a>
+      <a href="eligibility-check.html">Eligibility</a>
+      <a href="walkthrough.html">Sample Application Form</a>
+      <a href="https://tevalerie.github.io/j-use-eoi-form-/J-USE_REOI_2026_Application_Form.html" class="cta">Apply Now</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <h1>Frequently Asked Questions</h1>
+    <p class="subtitle">Search or browse common questions about the J-USE 2026 application.</p>
+  </section>
+
+  <div class="container">
+    <div class="search-box">
+      <input type="search" id="search" placeholder="Search the FAQ — e.g. 'budget', 'parish', 'co-financing'…" autocomplete="off" autofocus />
+      <div class="search-stats" id="searchStats"></div>
+    </div>
+
+    <div class="category-nav" id="categoryNav"></div>
+    <div id="faqRoot"></div>
+    <div class="empty" id="emptyState">No questions match your search. Try a different term, or browse by category above.</div>
+
+    <div class="help-block">
+      <h3>Can't find your answer?</h3>
+      <p>Email <a href="mailto:grants@efj.org.jm?subject=J-USE+REOI+2026+question">grants@efj.org.jm</a> and the J-USE Grants Team will respond within 24 hours. If your question is one others might share, we'll add it to this FAQ so the next applicant can find it instantly.</p>
+    </div>
+
+    <p class="last-updated" id="lastUpdated"></p>
+  </div>
+
+  <footer class="footer">
+    <p>
+      <a href="index.html">Overview</a> ·
+      <a href="eligibility-check.html">Eligibility</a> ·
+      <a href="walkthrough.html">Sample Application Form</a> ·
+      <a href="faq.html">FAQ</a> ·
+      <a href="https://tevalerie.github.io/j-use-eoi-form-/J-USE_REOI_2026_Application_Form.html">Apply</a> ·
+      <a href="mailto:grants@efj.org.jm">grants@efj.org.jm</a>
+    </p>
+  </footer>
+
+  <script>
+    // Slugify category names for anchor IDs
+    function slug(s) { return s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, ''); }
+    function escapeHtml(s) { return String(s).replace(/[&<>"']/g, m => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[m])); }
+
+    async function loadFaq() {
+      try {
+        const data = await fetch('faq-content.json?ts=' + Date.now()).then(r => r.json());
+        renderFaq(data);
+      } catch (e) {
+        document.getElementById('faqRoot').innerHTML = '<p style="text-align:center; color:#c0392b; padding:48px;">Could not load FAQ content. Please refresh the page.</p>';
+      }
+    }
+
+    function renderFaq(data) {
+      // Category nav
+      const navEl = document.getElementById('categoryNav');
+      navEl.innerHTML = data.categories.map(c => '<a href="#' + slug(c.name) + '">' + escapeHtml(c.name) + '</a>').join('');
+
+      // Categories + items
+      const root = document.getElementById('faqRoot');
+      root.innerHTML = data.categories.map(cat => {
+        const items = cat.items.map((it, i) =>
+          '<details class="qa" data-q="' + escapeHtml((it.q + ' ' + it.a).toLowerCase()) + '">' +
+            '<summary>' + escapeHtml(it.q) + '</summary>' +
+            '<div class="answer">' + it.a + '</div>' +
+          '</details>'
+        ).join('');
+        return '<section class="category" id="' + slug(cat.name) + '">' +
+          '<h2>' + escapeHtml(cat.name) + '</h2>' + items + '</section>';
+      }).join('');
+
+      if (data.lastUpdated) {
+        document.getElementById('lastUpdated').textContent = 'FAQ last updated: ' + data.lastUpdated;
+      }
+
+      // Wire search
+      const search = document.getElementById('search');
+      const stats  = document.getElementById('searchStats');
+      const empty  = document.getElementById('emptyState');
+      function applyFilter() {
+        const q = search.value.trim().toLowerCase();
+        let total = 0, visible = 0;
+        document.querySelectorAll('.qa').forEach(el => {
+          total++;
+          const matches = !q || el.dataset.q.indexOf(q) >= 0;
+          el.classList.toggle('hidden', !matches);
+          if (matches) {
+            visible++;
+            // Open matching items so the answer is immediately visible
+            if (q) el.setAttribute('open', '');
+            else el.removeAttribute('open');
+          } else {
+            el.removeAttribute('open');
+          }
+        });
+        // Hide categories with zero visible items during search
+        document.querySelectorAll('.category').forEach(cat => {
+          const anyVisible = cat.querySelectorAll('.qa:not(.hidden)').length > 0;
+          cat.style.display = anyVisible ? '' : 'none';
+        });
+        stats.textContent = q ? (visible + ' of ' + total + ' questions match') : '';
+        empty.classList.toggle('show', q && visible === 0);
+      }
+      search.addEventListener('input', applyFilter);
+    }
+
+    loadFaq();
+  </script>
+</body>
+</html>

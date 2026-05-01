@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>J-USE REOI 2026 — Apply for J-USE Nature-based Climate Solutions Funding</title>
+  <meta name="description" content="J-USE Nature-based Climate Solutions Programme 2026 — Expression of Interest. Up to JMD $15M for community NbCS projects in Kingston, St. Catherine, Clarendon, St. Mary, St. Thomas, Westmoreland and Hanover. Deadline: May 3, 2026." />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-print-color-adjust: exact; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: #1a1a1a;
+      background: #f5f9f7;
+      margin: 0;
+      line-height: 1.55;
+    }
+    /* ===== Top nav ===== */
+    .topnav {
+      background: #ffffff;
+      border-bottom: 1px solid #e0e8e3;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .topnav-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      color: #1a4a2e;
+      text-decoration: none;
+    }
+    .topnav-brand img { height: 36px; }
+    .topnav-links {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .topnav-links a {
+      color: #1a4a2e;
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 14px;
+    }
+    .topnav-links a:hover { background: #e8f5e9; }
+    .topnav-links a.cta {
+      background: linear-gradient(135deg, #2E8B57, #4169E1);
+      color: white;
+    }
+    .topnav-links a.cta:hover { box-shadow: 0 3px 12px rgba(0,0,0,0.18); background: linear-gradient(135deg, #246c44, #3057c8); }
+
+    /* ===== Hero ===== */
+    .hero {
+      background: linear-gradient(135deg, #2E8B57 0%, #4169E1 100%);
+      color: white;
+      padding: 64px 24px 56px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      margin: 0 auto 16px;
+      max-width: 920px;
+      font-size: 2.4rem;
+      line-height: 1.2;
+    }
+    .hero .tagline {
+      max-width: 720px;
+      margin: 0 auto 28px;
+      opacity: 0.95;
+      font-size: 1.05rem;
+    }
+    .hero .cta-row {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 22px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 15px;
+      letter-spacing: 0.2px;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .btn-primary { background: #ffffff; color: #1a4a2e; }
+    .btn-secondary { background: rgba(255,255,255,0.15); color: white; border: 1.5px solid rgba(255,255,255,0.6); }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,0.22); }
+    .btn-cta {
+      background: linear-gradient(135deg, #FF6B35, #F7931E);
+      color: white;
+    }
+
+    /* ===== Countdown ===== */
+    .countdown {
+      background: #fff8e1;
+      border-bottom: 1px solid #f0e0a8;
+      padding: 18px 24px;
+      text-align: center;
+      font-size: 1rem;
+      color: #6b5300;
+    }
+    .countdown strong { color: #b56500; font-size: 1.15rem; }
+
+    /* ===== Layout ===== */
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 48px 24px;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    @media (max-width: 760px) {
+      .grid-2, .grid-3 { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 1.7rem; }
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 28px 28px 24px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      border: 1px solid #e8efe9;
+    }
+    .card h2 {
+      color: #1a4a2e;
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 1.3rem;
+      font-family: Georgia, serif;
+    }
+    .card h3 {
+      color: #2E8B57;
+      margin: 20px 0 8px;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .card p { margin: 8px 0; }
+    .section-title {
+      font-family: Georgia, serif;
+      color: #1a4a2e;
+      font-size: 1.6rem;
+      margin: 48px 0 18px;
+      text-align: center;
+    }
+    .section-sub {
+      text-align: center;
+      color: #555;
+      max-width: 720px;
+      margin: 0 auto 24px;
+    }
+
+    /* ===== Doc list ===== */
+    .doc-list { list-style: none; padding: 0; margin: 14px 0 0; }
+    .doc-list li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 0;
+      border-bottom: 1px solid #eef3f0;
+    }
+    .doc-list li:last-child { border-bottom: 0; }
+    .doc-list a {
+      color: #1a4a2e;
+      text-decoration: none;
+      font-weight: 600;
+      flex: 1;
+    }
+    .doc-list a:hover { text-decoration: underline; }
+    .doc-icon {
+      background: #2E8B57;
+      color: white;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+    .doc-icon.xlsx { background: #1F7244; }
+    .doc-icon.docx { background: #2B5797; }
+
+    /* ===== Checklist ===== */
+    .checklist {
+      list-style: none;
+      padding: 0;
+      margin: 14px 0 0;
+    }
+    .checklist li {
+      padding: 10px 0 10px 32px;
+      position: relative;
+      border-bottom: 1px solid #eef3f0;
+      font-size: 0.97rem;
+    }
+    .checklist li:last-child { border-bottom: 0; }
+    .checklist li::before {
+      content: "✓";
+      position: absolute;
+      left: 4px;
+      top: 10px;
+      color: #2E8B57;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+    .checklist li.optional::before { content: "○"; color: #888; }
+    .checklist li small { color: #777; display: block; margin-top: 2px; }
+
+    /* ===== Process timeline ===== */
+    .process {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 0;
+      margin: 30px 0;
+      position: relative;
+    }
+    @media (max-width: 1080px) { .process { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 760px) { .process { grid-template-columns: 1fr; gap: 16px; } }
+    .process-step {
+      background: white;
+      padding: 22px 18px;
+      text-align: center;
+      border: 1px solid #e8efe9;
+      position: relative;
+    }
+    .process-step:not(:last-child)::after {
+      content: "→";
+      position: absolute;
+      right: -10px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #f5f9f7;
+      color: #2E8B57;
+      font-weight: 700;
+      width: 20px;
+      text-align: center;
+      z-index: 2;
+    }
+    @media (max-width: 760px) { .process-step:not(:last-child)::after { display: none; } }
+    .process-num {
+      background: #2E8B57;
+      color: white;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 10px;
+      font-weight: 700;
+    }
+    .process-step h4 { margin: 0 0 6px; font-size: 0.95rem; color: #1a4a2e; }
+    .process-step p { font-size: 0.8rem; color: #666; margin: 0; line-height: 1.4; }
+
+    /* ===== Eligibility highlight ===== */
+    .parishes {
+      background: #e8f5e9;
+      border-left: 4px solid #2E8B57;
+      padding: 18px 22px;
+      border-radius: 6px;
+      margin: 16px 0;
+    }
+    .parishes strong { color: #1a4a2e; }
+
+    /* ===== Footer ===== */
+    .footer {
+      background: #1a2e1f;
+      color: rgba(255,255,255,0.7);
+      padding: 32px 24px;
+      text-align: center;
+      margin-top: 48px;
+    }
+    .footer a { color: rgba(255,255,255,0.85); text-decoration: none; margin: 0 10px; }
+    .footer-meta { font-size: 0.85rem; margin-top: 12px; opacity: 0.6; }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Top nav ===== -->
+  <nav class="topnav">
+    <a href="index.html" class="topnav-brand">
+      <img src="https://res.cloudinary.com/dflgxstih/image/upload/v1774363916/logo_lockup_2_1_y8avql.png" alt="EFJ J-USE Logo" />
+      <span>J-USE REOI 2026</span>
+    </a>
+    <div class="topnav-links">
+      <a href="eligibility-check.html">Check Eligibility</a>
+      <a href="walkthrough.html">Sample Application Form</a>
+      <a href="faq.html">FAQ</a>
+      <a href="https://tevalerie.github.io/j-use-eoi-form-/J-USE_REOI_2026_Application_Form.html" class="cta">Apply Now</a>
+    </div>
+  </nav>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <h1>J-USE Nature-based Climate Solutions Programme 2026</h1>
+    <p class="tagline">Up to <strong>JMD $15 million</strong> in catalytic grant funding for community Nature-based Climate Solutions across seven Jamaican parishes. Closing the gap between climate vulnerability and locally-led action.</p>
+    <div class="cta-row">
+      <a href="https://tevalerie.github.io/j-use-eoi-form-/J-USE_REOI_2026_Application_Form.html" class="btn btn-primary">Start Application →</a>
+      <a href="eligibility-check.html" class="btn btn-secondary">60-second Eligibility Check</a>
+    </div>
+  </section>
+
+  <!-- ===== Countdown ===== -->
+  <div class="countdown">
+    <strong id="countdown">Loading…</strong> &nbsp;until the submission deadline (<strong>May 3, 2026, 11:59 p.m. EST</strong>)
+  </div>
+
+  <!-- ===== At a glance ===== -->
+  <div class="container">
+    <h2 class="section-title">At a glance</h2>
+    <div class="grid-3">
+      <div class="card">
+        <h3>Funding</h3>
+        <p style="font-size: 1.5rem; color: #2E8B57; font-weight: 700; margin: 8px 0;">Up to JMD $15M</p>
+        <p>Catalytic grant capital from Global Affairs Canada (GAC) channelled through the Environmental Foundation of Jamaica. Larger projects can apply if they secure co-financing.</p>
+      </div>
+      <div class="card">
+        <h3>Eligible Parishes</h3>
+        <p>Kingston &amp; St. Andrew · St. Catherine · Clarendon · St. Mary · St. Thomas · Westmoreland · Hanover</p>
+        <p style="margin-top: 8px;"><a href="eligibility-check.html" style="color: #4169E1; font-weight: 600;">Other parish? → Future Pipeline</a></p>
+      </div>
+      <div class="card">
+        <h3>Project Duration</h3>
+        <p style="font-size: 1.5rem; color: #2E8B57; font-weight: 700; margin: 8px 0;">12 months</p>
+        <p>Project must be deliverable within 12 months of grant award. Ongoing maintenance plan required.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== What you'll need ===== -->
+  <div class="container" style="padding-top: 0;">
+    <h2 class="section-title">What you'll need before you start</h2>
+    <p class="section-sub">Prepare these so you can complete the application in one sitting (~45 min). The form auto-saves every 30 seconds and you can download a draft as JSON to resume later.</p>
+    <div class="grid-2">
+      <div class="card">
+        <h3>Required for All Applicants</h3>
+        <ul class="checklist">
+          <li>Letter of Intent and Authorisation (PDF)
+            <small>Signed by an authorised representative within the current call period.</small>
+          </li>
+          <li>Detailed Budget Breakdown (Excel or PDF)
+            <small>Use the J-USE NbCS Budget Template — JMD only, max JMD $15M total.</small>
+          </li>
+          <li>Organisational Capacity / Previous Work (PDF, max 3 pages)
+            <small>Track record, key staff, past projects with similar scope.</small>
+          </li>
+          <li>Bank account in your organisation's legal name
+            <small>Hard eligibility criterion — EFJ cannot disburse without one.</small>
+          </li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Required for NGOs / Cooperatives / Faith-Based / Private</h3>
+        <ul class="checklist">
+          <li>Organisation Registration Certificate (PDF)
+            <small>Companies Office, Cooperative Societies registry, etc.</small>
+          </li>
+        </ul>
+        <h3 style="margin-top: 24px;">Government / SOE / Informal CBO</h3>
+        <ul class="checklist">
+          <li class="optional">Registration Certificate is <strong>not required</strong>
+            <small>Government &amp; SOEs: provide Ministry/Agency Head contact instead. Informal CBOs: a community leader's letter of support.</small>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Templates and guides ===== -->
+  <div class="container" style="padding-top: 0;">
+    <h2 class="section-title">Templates &amp; guides</h2>
+    <p class="section-sub">Download the templates, fill them out offline, then attach during your application.</p>
+    <div class="grid-2">
+      <div class="card">
+        <h3>Templates</h3>
+        <ul class="doc-list">
+          <li><span class="doc-icon xlsx">XLSX</span><a href="https://www.efj.org.jm/wp-content/uploads/2026/04/J-USE_NbCS_Budget_Template_FINAL_Neutral_Finaled.xlsx" target="_blank">J-USE NbCS Budget Template</a></li>
+          <li><span class="doc-icon docx">DOCX</span><a href="https://www.efj.org.jm/wp-content/uploads/2026/04/LOI_Template_General.docx" target="_blank">Letter of Intent — General Template</a></li>
+          <li><span class="doc-icon docx">DOCX</span><a href="https://www.efj.org.jm/wp-content/uploads/2026/04/LOI_Template_Government_SOE.docx" target="_blank">Letter of Intent — Government / SOE Template</a></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Guides &amp; Sample Application Form</h3>
+        <ul class="doc-list">
+          <li><span class="doc-icon">PDF</span><a href="https://www.efj.org.jm/wp-content/uploads/2026/04/J-USE-REOI-2026-—-End-User-Guide-to-the-Application-Form-rev2.pdf" target="_blank">Application Form — End User Guide</a></li>
+          <li><span class="doc-icon">PDF</span><a href="https://www.efj.org.jm/wp-content/uploads/2026/04/J-USE-REOI-2026-—-Budget-Template-End-User-Guide.pdf" target="_blank">Budget Template — End User Guide</a></li>
+          <li><span class="doc-icon">📋</span><a href="walkthrough.html">Sample Application Form — Hybrid Community Farm</a></li>
+          <li><span class="doc-icon xlsx">XLSX</span><a href="J-USE_Example_Hybrid_CommunityFarm_FINAL.xlsx" download>Sample Application Budget Workbook — Hybrid Community Farm</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== The process ===== -->
+  <div class="container" style="padding-top: 0;">
+    <h2 class="section-title">The process</h2>
+    <div class="process">
+      <div class="process-step">
+        <div class="process-num">1</div>
+        <h4>Submit EOI</h4>
+        <p>By 11:59 p.m. May 3, 2026</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num">2</div>
+        <h4>Initial Screening</h4>
+        <p>Within 5 business days</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num">3</div>
+        <h4>Webinars</h4>
+        <p>May 13–14 &amp; 20–21, 2026</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num">4</div>
+        <h4>Proposal Writing Workshop</h4>
+        <p>Dates TBD (by invitation)</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num">5</div>
+        <h4>Full Proposal</h4>
+        <p>Late May (by invitation)</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num">6</div>
+        <h4>Awards</h4>
+        <p>June 2026</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CTA ===== -->
+  <div class="container" style="text-align: center;">
+    <h2 class="section-title" style="margin-bottom: 16px;">Ready to apply?</h2>
+    <p class="section-sub">Take 60 seconds to confirm eligibility, then start the application — or skip straight to the form.</p>
+    <div style="margin-top: 24px;">
+      <a href="eligibility-check.html" class="btn" style="background: white; color: #2E8B57; border: 2px solid #2E8B57; margin-right: 12px;">Check Eligibility First</a>
+      <a href="https://tevalerie.github.io/j-use-eoi-form-/J-USE_REOI_2026_Application_Form.html" class="btn btn-cta">Start Application Now →</a>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>
+      <a href="https://tevalerie.github.io/j-use-eoi-form-/J-USE_REOI_2026_Application_Form.html">Application Form</a> ·
+      <a href="eligibility-check.html">Eligibility Check</a> ·
+      <a href="walkthrough.html">Sample Application Form</a> ·
+      <a href="faq.html">FAQ</a> ·
+      <a href="mailto:grants@efj.org.jm">grants@efj.org.jm</a>
+    </p>
+    <p class="footer-meta">
+      Environmental Foundation of Jamaica · J-USE Programme · Funded by Global Affairs Canada (GAC)
+    </p>
+  </footer>
+
+  <script>
+    // Live deadline countdown
+    (function () {
+      const deadline = new Date('2026-05-04T04:59:00Z'); // 11:59 p.m. EST May 3 = 04:59 UTC May 4
+      const el = document.getElementById('countdown');
+      function tick() {
+        const now = new Date();
+        const ms = deadline - now;
+        if (ms <= 0) {
+          el.textContent = 'Submission window has closed';
+          return;
+        }
+        const days  = Math.floor(ms / 86400000);
+        const hours = Math.floor((ms % 86400000) / 3600000);
+        const mins  = Math.floor((ms % 3600000) / 60000);
+        el.textContent = days + ' days, ' + hours + ' hours, ' + mins + ' minutes';
+      }
+      tick();
+      setInterval(tick, 60000);
+    })();
+  </script>
+</body>
+</html>

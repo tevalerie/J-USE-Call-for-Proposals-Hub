@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>J-USE Eligibility Check — 60 seconds</title>
+  <meta name="description" content="Quick 6-question check to confirm your project is eligible for the J-USE 2026 funding round before you start the full application." />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: #1a1a1a; background: #f5f9f7; margin: 0; line-height: 1.55; }
+
+    .topnav { background: #fff; border-bottom: 1px solid #e0e8e3; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    .topnav-brand { display: flex; align-items: center; gap: 12px; font-weight: 700; color: #1a4a2e; text-decoration: none; }
+    .topnav-brand img { height: 36px; }
+    .topnav-links a { color: #1a4a2e; text-decoration: none; padding: 8px 14px; border-radius: 6px; font-weight: 600; font-size: 14px; }
+    .topnav-links a:hover { background: #e8f5e9; }
+
+    .container { max-width: 720px; margin: 40px auto; padding: 0 20px; }
+    .card { background: white; border-radius: 12px; padding: 36px 32px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+    h1 { font-family: Georgia, serif; color: #1a4a2e; margin: 0 0 8px; font-size: 1.6rem; }
+    .lead { color: #666; margin: 0 0 28px; }
+
+    /* Progress */
+    .progress-bar { height: 6px; background: #e8f5e9; border-radius: 3px; margin-bottom: 28px; overflow: hidden; }
+    .progress-fill { height: 100%; background: linear-gradient(90deg, #2E8B57, #4169E1); transition: width 0.3s; }
+
+    /* Question */
+    .question { display: none; }
+    .question.active { display: block; }
+    .question h2 { font-family: Georgia, serif; font-size: 1.3rem; color: #1a4a2e; margin: 0 0 8px; }
+    .question .help { color: #777; font-size: 0.9rem; margin-bottom: 20px; }
+
+    .options { display: grid; gap: 10px; margin-bottom: 24px; }
+    .option {
+      display: flex; align-items: flex-start; gap: 12px;
+      padding: 16px 18px;
+      border: 2px solid #e8efe9; border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.15s;
+      background: white;
+    }
+    .option:hover { border-color: #2E8B57; background: #f5f9f7; }
+    .option.selected { border-color: #2E8B57; background: #e8f5e9; }
+    .option input { margin: 4px 0 0; flex-shrink: 0; }
+    .option .label { font-weight: 600; color: #1a1a1a; }
+    .option .desc { font-size: 0.85rem; color: #666; margin-top: 4px; }
+
+    /* Multi-select */
+    .check-grid { display: grid; gap: 10px; margin-bottom: 24px; }
+    .check-item { display: flex; align-items: center; gap: 12px; padding: 12px 16px; border: 2px solid #e8efe9; border-radius: 8px; cursor: pointer; transition: all 0.15s; }
+    .check-item:hover { border-color: #2E8B57; background: #f5f9f7; }
+    .check-item.selected { border-color: #2E8B57; background: #e8f5e9; }
+    .check-item input { margin: 0; }
+
+    .nav-row { display: flex; justify-content: space-between; gap: 12px; margin-top: 24px; }
+    .btn { padding: 12px 24px; border-radius: 8px; font-weight: 700; cursor: pointer; border: 0; font-size: 14px; transition: transform 0.15s; }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary { background: linear-gradient(135deg, #2E8B57, #4169E1); color: white; }
+    .btn-secondary { background: #e8efe9; color: #1a4a2e; }
+    .btn:disabled { opacity: 0.4; cursor: not-allowed; transform: none; }
+
+    /* Result page */
+    .result { display: none; text-align: center; padding: 16px 0; }
+    .result.active { display: block; }
+    .result-icon { font-size: 3rem; margin-bottom: 12px; }
+    .result.eligible h2 { color: #2E8B57; }
+    .result.future h2 { color: #b56500; }
+    .result.no-match h2 { color: #c0392b; }
+    .reasons { background: #f5f9f7; border-radius: 8px; padding: 18px 22px; text-align: left; margin: 20px 0; }
+    .reasons li { margin: 6px 0; }
+
+    .lead-form { text-align: left; margin-top: 24px; }
+    .lead-form label { display: block; font-weight: 600; margin: 12px 0 6px; }
+    .lead-form input, .lead-form textarea { width: 100%; padding: 10px 12px; border: 1px solid #d0d8d2; border-radius: 6px; font-family: inherit; font-size: 14px; }
+    .small-print { font-size: 0.8rem; color: #888; margin-top: 14px; }
+  </style>
+</head>
+<body>
+
+  <nav class="topnav">
+    <a href="index.html" class="topnav-brand">
+      <img src="https://res.cloudinary.com/dflgxstih/image/upload/v1774363916/logo_lockup_2_1_y8avql.png" alt="EFJ J-USE Logo" />
+      <span>J-USE REOI 2026</span>
+    </a>
+    <div class="topnav-links">
+      <a href="index.html">← Back to overview</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="card">
+      <h1>60-second Eligibility Check</h1>
+      <p class="lead">Six quick questions confirm whether your project fits the current J-USE call before you spend ~45 minutes on the full application.</p>
+
+      <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width: 0%;"></div></div>
+
+      <!-- Q1 — Registered -->
+      <div class="question active" data-q="1">
+        <h2>1. Is your organisation registered or recognised in Jamaica?</h2>
+        <p class="help">"Recognised" includes informal CBOs that can produce a community leader's letter.</p>
+        <div class="options">
+          <label class="option"><input type="radio" name="q1" value="yes" /><span><span class="label">Yes</span><span class="desc">Registered NGO / company / cooperative / faith-based / academic / Government / SOE, OR informal CBO with community recognition.</span></span></label>
+          <label class="option"><input type="radio" name="q1" value="no"  /><span><span class="label">No</span><span class="desc">Individual or unregistered group with no formal recognition.</span></span></label>
+        </div>
+      </div>
+
+      <!-- Q2 — Bank account -->
+      <div class="question" data-q="2">
+        <h2>2. Do you have a bank account in your organisation's legal name?</h2>
+        <p class="help">Hard requirement — EFJ cannot disburse funds to personal accounts.</p>
+        <div class="options">
+          <label class="option"><input type="radio" name="q2" value="yes" /><span><span class="label">Yes — active organisational bank account</span></span></label>
+          <label class="option"><input type="radio" name="q2" value="no"  /><span><span class="label">No — only personal accounts available</span></span></label>
+        </div>
+      </div>
+
+      <!-- Q3 — Parish -->
+      <div class="question" data-q="3">
+        <h2>3. Where is your project located?</h2>
+        <p class="help">J-USE 2026 funds projects in seven specific parishes.</p>
+        <div class="options">
+          <label class="option"><input type="radio" name="q3" value="kingston"     /><span><span class="label">Kingston &amp; St. Andrew</span></span></label>
+          <label class="option"><input type="radio" name="q3" value="st-catherine" /><span><span class="label">St. Catherine</span></span></label>
+          <label class="option"><input type="radio" name="q3" value="clarendon"    /><span><span class="label">Clarendon</span></span></label>
+          <label class="option"><input type="radio" name="q3" value="st-mary"      /><span><span class="label">St. Mary</span></span></label>
+          <label class="option"><input type="radio" name="q3" value="st-thomas"    /><span><span class="label">St. Thomas</span></span></label>
+          <label class="option"><input type="radio" name="q3" value="westmoreland" /><span><span class="label">Westmoreland</span></span></label>
+          <label class="option"><input type="radio" name="q3" value="hanover"      /><span><span class="label">Hanover</span></span></label>
+          <label class="option"><input type="radio" name="q3" value="other"        /><span><span class="label">A different parish</span><span class="desc">(e.g. Manchester, St. James, Trelawny, St. Ann, Portland, St. Elizabeth)</span></span></label>
+        </div>
+      </div>
+
+      <!-- Q4 — NbCS -->
+      <div class="question" data-q="4">
+        <h2>4. Is your project a Nature-based Climate Solution (NbCS)?</h2>
+        <p class="help">NbCS = projects that protect, restore or sustainably manage ecosystems to address climate change while delivering biodiversity and human-wellbeing benefits.</p>
+        <div class="options">
+          <label class="option"><input type="radio" name="q4" value="yes"     /><span><span class="label">Yes — clearly nature-based + climate-focused</span><span class="desc">e.g. mangrove restoration, agroforestry, bioswales, urban tree canopy, climate-smart farming, water harvesting, coastal protection.</span></span></label>
+          <label class="option"><input type="radio" name="q4" value="partial" /><span><span class="label">Partially — there's a nature element but climate is secondary</span></span></label>
+          <label class="option"><input type="radio" name="q4" value="no"      /><span><span class="label">No — not nature-based</span></span></label>
+        </div>
+      </div>
+
+      <!-- Q5 — Budget -->
+      <div class="question" data-q="5">
+        <h2>5. What's your estimated total project cost?</h2>
+        <p class="help">In Jamaican Dollars (JMD). J-USE 2026 grants up to JMD $15M per project. Larger projects can still apply if they identify co-financing.</p>
+        <div class="options">
+          <label class="option"><input type="radio" name="q5" value="in-range"  /><span><span class="label">Up to JMD $15M</span><span class="desc">Within the J-USE grant cap — ask for whatever you need (no floor).</span></span></label>
+          <label class="option"><input type="radio" name="q5" value="over-15m"  /><span><span class="label">More than JMD $15M</span><span class="desc">You'll need to identify confirmed co-financing partners — J-USE caps the grant at $15M.</span></span></label>
+        </div>
+      </div>
+
+      <!-- Q6 — Duration -->
+      <div class="question" data-q="6">
+        <h2>6. Can the project be delivered within 12 months?</h2>
+        <p class="help">J-USE-funded projects must complete primary activities within a 12-month implementation window from grant award. Long-term maintenance plans are required separately.</p>
+        <div class="options">
+          <label class="option"><input type="radio" name="q6" value="yes"     /><span><span class="label">Yes — clear 12-month workplan</span></span></label>
+          <label class="option"><input type="radio" name="q6" value="maybe"   /><span><span class="label">Mostly — some activities extend beyond Year 1</span></span></label>
+          <label class="option"><input type="radio" name="q6" value="no"      /><span><span class="label">No — multi-year build-out</span></span></label>
+        </div>
+      </div>
+
+      <div class="nav-row" id="navRow">
+        <button class="btn btn-secondary" id="prevBtn" onclick="prev()" disabled>← Previous</button>
+        <button class="btn btn-primary" id="nextBtn" onclick="next()" disabled>Next →</button>
+      </div>
+
+      <!-- Eligible result -->
+      <div class="result eligible" data-result="eligible">
+        <div class="result-icon">✅</div>
+        <h2>You're eligible — let's go</h2>
+        <p>Your project meets all six J-USE 2026 criteria. Time to start the full application — it takes about 45 minutes.</p>
+        <ul class="reasons" id="eligibleReasons"></ul>
+        <p style="margin: 16px 0;"><a href="https://tevalerie.github.io/j-use-eoi-form-/J-USE_REOI_2026_Application_Form.html" class="btn btn-primary">Start Application →</a></p>
+        <p class="small-print">Tip: click <strong>📋 See Sample Application Form</strong> at the top of the form to load the Hybrid Community Farm example so you can see what good looks like before you write your own content.</p>
+      </div>
+
+      <!-- Future pipeline -->
+      <div class="result future" data-result="future">
+        <div class="result-icon">📅</div>
+        <h2>Not eligible this round — but we want to know about your project</h2>
+        <p>Your project doesn't fit the current J-USE 2026 criteria, but we're building a pipeline for future funding rounds and partnership opportunities. Tell us a bit about your work and we'll keep you posted.</p>
+        <ul class="reasons" id="futureReasons"></ul>
+
+        <form class="lead-form" id="leadForm" onsubmit="submitLead(event)">
+          <label>Organisation name *
+            <input type="text" name="orgName" required />
+          </label>
+          <label>Contact name *
+            <input type="text" name="contactName" required />
+          </label>
+          <label>Email *
+            <input type="email" name="email" required />
+          </label>
+          <label>Phone (optional)
+            <input type="tel" name="phone" />
+          </label>
+          <label>Project parish (optional)
+            <input type="text" name="parish" id="leadParish" />
+          </label>
+          <label>One-line description of your project (optional)
+            <textarea name="notes" rows="3" placeholder="What you're trying to do — even one sentence helps us understand your pipeline."></textarea>
+          </label>
+          <p style="margin-top: 18px;"><button type="submit" class="btn btn-primary">Add Me to the Future Pipeline →</button></p>
+        </form>
+
+        <div id="leadSuccess" style="display: none; padding: 24px; background: #e8f5e9; border-radius: 8px; text-align: left; margin-top: 16px;">
+          <h3 style="color: #2E8B57; margin-top: 0;">✓ You're on the list</h3>
+          <p>Thanks — the EFJ Grants team has been notified and will reach out about future opportunities that fit your project. In the meantime, feel free to <a href="walkthrough.html">read the sample application form</a> or <a href="faq.html">browse the FAQ</a> to understand how J-USE thinks about NbCS projects.</p>
+        </div>
+
+        <p class="small-print" style="margin-top: 14px;">Your details are stored securely in EFJ's grants database and used only to contact you about future funding opportunities. We do not share data with third parties.</p>
+      </div>
+
+      <!-- Hard no -->
+      <div class="result no-match" data-result="no-match">
+        <div class="result-icon">⚠️</div>
+        <h2>Not eligible — and we can't capture as a future pipeline</h2>
+        <p>Your project doesn't currently meet a hard J-USE eligibility criterion (e.g. no organisational bank account, or not a registered/recognised entity).</p>
+        <ul class="reasons" id="noMatchReasons"></ul>
+        <p>Suggested next steps:</p>
+        <ul style="text-align: left; max-width: 480px; margin: 12px auto;">
+          <li>If you don't have an organisational bank account, work with a registered partner to apply on your behalf — many J-USE-funded projects are partnerships.</li>
+          <li>If your project isn't nature-based, browse other EFJ grant streams at <a href="https://www.efj.org.jm/" target="_blank">efj.org.jm</a>.</li>
+          <li>If you're an individual with a strong NbCS idea, find a registered NGO or cooperative partner to host the project.</li>
+        </ul>
+        <p style="margin-top: 18px;"><a href="https://www.efj.org.jm/" target="_blank" class="btn btn-secondary">Explore other EFJ programmes →</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Backend Apps Script URL — same as the form's
+    const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyyKe9jNhtQrKf0VyRrErRBXFp2NXk6_V-dzwBvkP8g92TFZmEURIfn1hoFIvXYslk/exec';
+
+    const TOTAL = 6;
+    let currentQ = 1;
+    const answers = {};
+
+    // Visual selection feedback
+    document.querySelectorAll('.option, .check-item').forEach(el => {
+      el.addEventListener('click', () => {
+        const input = el.querySelector('input');
+        if (!input) return;
+        if (input.type === 'radio') {
+          el.parentElement.querySelectorAll('.option, .check-item').forEach(s => s.classList.remove('selected'));
+          el.classList.add('selected');
+          input.checked = true;
+          // Auto-advance for radios after a short delay
+          answers['q' + currentQ] = input.value;
+          document.getElementById('nextBtn').disabled = false;
+        } else {
+          el.classList.toggle('selected', input.checked = !input.checked);
+        }
+      });
+    });
+
+    function show(q) {
+      document.querySelectorAll('.question').forEach(el => el.classList.remove('active'));
+      const target = document.querySelector('[data-q="' + q + '"]');
+      if (target) target.classList.add('active');
+      document.getElementById('progressFill').style.width = ((q - 1) / TOTAL * 100) + '%';
+      document.getElementById('prevBtn').disabled = (q <= 1);
+      document.getElementById('nextBtn').textContent = (q === TOTAL) ? 'See Result →' : 'Next →';
+      document.getElementById('nextBtn').disabled = !answers['q' + q];
+    }
+
+    function next() {
+      if (!answers['q' + currentQ]) return;
+      if (currentQ < TOTAL) {
+        currentQ++;
+        show(currentQ);
+      } else {
+        evaluate();
+      }
+    }
+    function prev() {
+      if (currentQ > 1) {
+        currentQ--;
+        show(currentQ);
+      }
+    }
+
+    function evaluate() {
+      // Hide questions + nav, show result
+      document.querySelectorAll('.question').forEach(el => el.classList.remove('active'));
+      document.getElementById('navRow').style.display = 'none';
+      document.getElementById('progressFill').style.width = '100%';
+
+      const reasons = [];
+      const hardFailures = [];
+      const softFailures = [];
+
+      // Q1 — registered (HARD)
+      if (answers.q1 === 'no') hardFailures.push('Your organisation is not registered or recognised — J-USE requires a registered org or an informal CBO with documentable community recognition.');
+      else                      reasons.push('Registered / recognised organisation ✓');
+
+      // Q2 — bank account (HARD)
+      if (answers.q2 === 'no') hardFailures.push('No organisational bank account — EFJ cannot disburse funds without one.');
+      else                      reasons.push('Bank account in organisation\'s name ✓');
+
+      // Q3 — parish (SOFT — feeds future pipeline)
+      const eligibleParishes = ['kingston','st-catherine','clarendon','st-mary','st-thomas','westmoreland','hanover'];
+      if (eligibleParishes.indexOf(answers.q3) < 0) {
+        softFailures.push('Project is in a parish not covered by the current J-USE 2026 round (' + answers.q3 + '). Future rounds are likely to expand coverage.');
+      } else {
+        reasons.push('Project located in an eligible parish (' + answers.q3 + ') ✓');
+      }
+
+      // Q4 — NbCS (HARD if 'no', SOFT if 'partial')
+      if (answers.q4 === 'no') hardFailures.push('Project is not nature-based — J-USE specifically funds NbCS projects.');
+      else if (answers.q4 === 'partial') softFailures.push('NbCS connection is partial. Consider how to strengthen the climate dimension before a full application.');
+      else reasons.push('Clearly nature-based + climate-focused ✓');
+
+      // Q5 — budget (SOFT)
+      if (answers.q5 === 'over-15m') softFailures.push('Total project cost exceeds J-USE\'s $15M grant cap — you\'ll need to identify confirmed co-financing partners before applying.');
+      else reasons.push('Budget within J-USE\'s grant cap (up to $15M) ✓');
+
+      // Q6 — 12 months (SOFT for 'maybe', HARD for 'no')
+      if (answers.q6 === 'no') hardFailures.push('Project cannot be delivered within 12 months — J-USE 2026 funds 12-month implementation windows.');
+      else if (answers.q6 === 'maybe') softFailures.push('Some activities extend beyond Year 1 — be ready to phase the workplan in your application.');
+      else reasons.push('12-month implementation window achievable ✓');
+
+      // Decision logic
+      let resultKey;
+      if (hardFailures.length > 0) {
+        resultKey = (hardFailures.length === 1 && hardFailures[0].indexOf('parish') >= 0) ? 'future' : 'no-match';
+      } else if (softFailures.length > 0) {
+        resultKey = 'future';
+      } else {
+        resultKey = 'eligible';
+      }
+
+      // Render reasons
+      if (resultKey === 'eligible') {
+        const ul = document.getElementById('eligibleReasons');
+        ul.innerHTML = '<strong>What you confirmed:</strong>' + reasons.map(r => '<li>' + r + '</li>').join('');
+      } else if (resultKey === 'future') {
+        const ul = document.getElementById('futureReasons');
+        ul.innerHTML = '<strong>Why we\'ll add you to the pipeline rather than route to the form:</strong>' +
+          softFailures.concat(hardFailures).map(r => '<li>' + r + '</li>').join('');
+        // Pre-fill parish if known
+        if (eligibleParishes.indexOf(answers.q3) < 0 && answers.q3 !== 'other') {
+          document.getElementById('leadParish').value = answers.q3;
+        }
+      } else {
+        document.getElementById('noMatchReasons').innerHTML =
+          '<strong>Hard criteria not met:</strong>' + hardFailures.map(r => '<li>' + r + '</li>').join('');
+      }
+
+      document.querySelectorAll('.result').forEach(el => el.classList.remove('active'));
+      document.querySelector('[data-result="' + resultKey + '"]').classList.add('active');
+    }
+
+    async function submitLead(ev) {
+      ev.preventDefault();
+      const form = ev.target;
+      const data = {};
+      Array.from(new FormData(form).entries()).forEach(([k, v]) => data[k] = v);
+      data.source_flow = 'eligibility_quiz_future_pipeline';
+      data.eligibility_answers = answers;
+      data.timestamp = new Date().toISOString();
+
+      try {
+        await fetch(APPS_SCRIPT_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify({ phase: 'lead', formData: data })
+        });
+      } catch (e) { /* lead capture is best-effort */ }
+
+      form.style.display = 'none';
+      document.getElementById('leadSuccess').style.display = 'block';
+    }
+
+    // Init
+    show(1);
+  </script>
+</body>
+</html>

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sample Application Form — Hybrid Community Farm | J-USE REOI 2026</title>
+  <meta name="description" content="A complete worked example of a strong J-USE application: the Clarendon Youth Farmers Cooperative's Hybrid Community Agroforestry & Market Garden project. See what good looks like before you write your own." />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: #1a1a1a; background: #f5f9f7; margin: 0; line-height: 1.6; }
+
+    .topnav { background: #fff; border-bottom: 1px solid #e0e8e3; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    .topnav-brand { display: flex; align-items: center; gap: 12px; font-weight: 700; color: #1a4a2e; text-decoration: none; }
+    .topnav-brand img { height: 36px; }
+    .topnav-links a { color: #1a4a2e; text-decoration: none; padding: 8px 14px; border-radius: 6px; font-weight: 600; font-size: 14px; }
+    .topnav-links a:hover { background: #e8f5e9; }
+    .topnav-links a.cta { background: linear-gradient(135deg, #2E8B57, #4169E1); color: white; }
+
+    .hero {
+      background: linear-gradient(135deg, #2E8B57 0%, #4169E1 100%);
+      color: white;
+      padding: 48px 20px;
+      text-align: center;
+    }
+    .hero .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .hero h1 { font-family: Georgia, serif; max-width: 880px; margin: 0 auto 12px; font-size: 2.1rem; line-height: 1.2; }
+    .hero .subtitle { max-width: 720px; margin: 0 auto; opacity: 0.95; font-size: 1.05rem; }
+
+    .container { max-width: 880px; margin: 0 auto; padding: 32px 24px 48px; }
+
+    .quick-facts {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin: -32px auto 32px;
+      max-width: 880px;
+      position: relative;
+      z-index: 2;
+    }
+    @media (max-width: 720px) { .quick-facts { grid-template-columns: repeat(2, 1fr); } }
+    .fact {
+      background: white;
+      padding: 18px 16px;
+      border-radius: 10px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .fact .num { font-family: Georgia, serif; font-size: 1.6rem; color: #2E8B57; font-weight: 700; line-height: 1; }
+    .fact .lbl { font-size: 0.78rem; color: #666; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 6px; }
+
+    .section {
+      background: white;
+      border-radius: 12px;
+      padding: 32px 36px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      margin-bottom: 24px;
+    }
+    @media (max-width: 720px) { .section { padding: 24px 20px; } }
+    .section h2 {
+      font-family: Georgia, serif;
+      color: #1a4a2e;
+      font-size: 1.4rem;
+      margin: 0 0 8px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #e8efe9;
+    }
+    .section .step-meta {
+      color: #666;
+      font-size: 0.85rem;
+      margin: -4px 0 18px;
+    }
+    .section h3 {
+      color: #2E8B57;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin: 22px 0 6px;
+    }
+    .section p { margin: 8px 0; }
+
+    .insight {
+      background: #fff8e1;
+      border-left: 4px solid #f0ad4e;
+      padding: 14px 18px;
+      border-radius: 6px;
+      margin: 18px 0;
+      font-size: 0.92rem;
+    }
+    .insight strong { color: #b56500; }
+
+    .quote {
+      background: #f5f9f7;
+      border-left: 4px solid #2E8B57;
+      padding: 14px 22px;
+      border-radius: 6px;
+      margin: 14px 0;
+      font-style: italic;
+      color: #1a4a2e;
+    }
+
+    table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.92rem; }
+    th, td { padding: 10px 12px; border-bottom: 1px solid #e8efe9; text-align: left; vertical-align: top; }
+    th { background: #f5f9f7; color: #1a4a2e; font-weight: 600; }
+
+    .cta-block {
+      background: linear-gradient(135deg, #2E8B57, #4169E1);
+      color: white;
+      padding: 32px 28px;
+      border-radius: 12px;
+      text-align: center;
+      margin-top: 32px;
+    }
+    .cta-block h2 { font-family: Georgia, serif; margin: 0 0 12px; }
+    .btn { display: inline-block; background: white; color: #1a4a2e; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 700; margin-top: 10px; }
+    .btn:hover { box-shadow: 0 6px 18px rgba(0,0,0,0.22); }
+
+    .footer { background: #1a2e1f; color: rgba(255,255,255,0.7); padding: 28px 24px; text-align: center; margin-top: 48px; font-size: 0.9rem; }
+    .footer a { color: rgba(255,255,255,0.85); text-decoration: none; margin: 0 8px; }
+  </style>
+</head>
+<body>
+
+  <nav class="topnav">
+    <a href="index.html" class="topnav-brand">
+      <img src="https://res.cloudinary.com/dflgxstih/image/upload/v1774363916/logo_lockup_2_1_y8avql.png" alt="EFJ J-USE Logo" />
+      <span>J-USE REOI 2026</span>
+    </a>
+    <div class="topnav-links">
+      <a href="index.html">← Overview</a>
+      <a href="eligibility-check.html">Eligibility Check</a>
+      <a href="faq.html">FAQ</a>
+      <a href="https://tevalerie.github.io/j-use-eoi-form-/J-USE_REOI_2026_Application_Form.html" class="cta">Apply Now</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <span class="badge">Sample Application Form — Illustrative Only</span>
+    <h1>Hybrid Community Agroforestry &amp; Market Garden — Clarendon</h1>
+    <p class="subtitle">How a fictional but realistic application would tell its story across all 10 sections of the J-USE REOI form.</p>
+  </section>
+
+  <div class="quick-facts">
+    <div class="fact"><div class="num">JMD $8.35M</div><div class="lbl">Total Cost</div></div>
+    <div class="fact"><div class="num">JMD $6.2M</div><div class="lbl">J-USE Request</div></div>
+    <div class="fact"><div class="num">5 ha</div><div class="lbl">Land Restored</div></div>
+    <div class="fact"><div class="num">25</div><div class="lbl">Youth Trained</div></div>
+  </div>
+
+  <div class="container">
+    <div class="insight" style="margin-top: 0;">
+      <strong>Why this example?</strong> The Hybrid Community Farm is built around the J-USE programme's design priorities: a clear nature-based intervention, climate additionality, gender + youth focus, hybrid revenue + public-good model, demonstrable scaling pathway. Use it as a structural reference — never copy the content. Reviewers spot duplicated examples instantly.
+    </div>
+
+    <!-- Section 1 -->
+    <div class="section">
+      <h2>Section 1 — Organisation</h2>
+      <p class="step-meta">~3–5 minutes · Identifies who you are and how to reach you.</p>
+
+      <h3>The example</h3>
+      <p>Applicant: <strong>Clarendon Youth Farmers Cooperative</strong> — a Cooperative registered in March 2019 under the Cooperative Societies Act. Active 6-year operating history. Bank account in cooperative's legal name (mandatory). Primary contact: Executive Director (female), age 30. SOE / Government head fields hidden because regType ≠ Government.</p>
+
+      <h3>Why this matters</h3>
+      <p>EFJ uses Section 1 to confirm hard eligibility (organisational bank account; recognised legal entity) and to route capacity-building communications. Government / SOE applicants automatically skip the Registration Certificate upload — the form handles that conditionally.</p>
+
+      <div class="insight"><strong>Tip:</strong> Make sure your registration number matches the certificate you upload at Step 9. Mismatches are the #1 reason for the grants team to send back-and-forth emails.</div>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="section">
+      <h2>Section 2 — Climate Context &amp; Vulnerability</h2>
+      <p class="step-meta">~15–20 minutes · The longest section. Where you make the case.</p>
+
+      <h3>Climate hazards (multi-select)</h3>
+      <p>Drought · Flooding · Heat · Food security</p>
+
+      <h3>Exposure description</h3>
+      <div class="quote">"Clarendon is Jamaica's most drought-prone parish. Average rainfall has dropped 18% over the past decade, with the May–November season experiencing increasingly erratic patterns. The Rio Minho watershed — on which our 5-ha plot depends — has seen baseflow drops of 30% during dry spells, putting smallholder farms at severe risk."</div>
+
+      <h3>Vulnerability description</h3>
+      <div class="quote">"Smallholder youth farmers in the May Pen / Mocho corridor are highly vulnerable: 78% rely on rain-fed agriculture as primary income, 64% report income loss of &gt;40% during the 2023–2024 drought."</div>
+
+      <div class="insight"><strong>What makes this strong:</strong> Specific numbers (18%, 30%, 78%, 64%), named geography (Rio Minho watershed, May Pen/Mocho corridor), and a direct line from physical exposure → community vulnerability. Generic statements like "climate change is a problem" score poorly.</div>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="section">
+      <h2>Section 3 — NbCS Interventions &amp; Outcomes</h2>
+      <p class="step-meta">~8–10 minutes · The heart of your project design.</p>
+
+      <h3>Primary NbCS interventions</h3>
+      <p>Urban Agroforestry · Slope Agroforestry · Rainwater Harvesting · Community Garden · School Garden</p>
+
+      <h3>Project description</h3>
+      <p>Establishes a 5-ha integrated agroforestry system on a community-owned plot. Components: 2,500 native fruit + timber trees of 15 species at 5m × 5m spacing on contour lines; drip irrigation on the full 5 ha (solar-pumped from rainwater storage); intercropped vegetables for early income; solar-powered post-harvest processing shed; market linkages to 8 schools (public good) + a Kingston farm-to-table chain (revenue); 12-month training programme for 25 youth.</p>
+
+      <h3>Outcome metrics (the dynamic table)</h3>
+      <table>
+        <tr><th>Outcome</th><th>Baseline</th><th>Expected (12 months)</th><th>How measured</th></tr>
+        <tr><td>Land restored</td><td>0 ha</td><td>5 ha</td><td>GPS survey + drone imagery</td></tr>
+        <tr><td>Trees planted</td><td>0</td><td>2,500</td><td>On-site count + 12-month survival audit</td></tr>
+        <tr><td>Youth farmers trained</td><td>0</td><td>25</td><td>Attendance roster + competency assessment</td></tr>
+        <tr><td>Tree survival rate</td><td>n/a</td><td>≥80%</td><td>Census audit on 100-tree random sample</td></tr>
+        <tr><td>Annual income / farmer (Yr 2)</td><td>JMD 240k</td><td>JMD 480k</td><td>Cooperative income statement + farmer survey</td></tr>
+        <tr><td>Schools supplied</td><td>0</td><td>8</td><td>Signed school supply agreements + delivery logs</td></tr>
+        <tr><td>Carbon sequestration</td><td>0</td><td>60 tCO2e/yr</td><td>IPCC Tier-2 estimation from species + DBH</td></tr>
+      </table>
+
+      <div class="insight"><strong>Tip:</strong> Outcomes should be specific, measurable, and tied to verifiable methods. "Improve community wellbeing" is not an outcome. "8 schools receiving fresh produce, verified by signed supply agreements" is.</div>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="section">
+      <h2>Section 4 — Beneficiaries &amp; Social Co-Benefits</h2>
+      <p class="step-meta">~10–12 minutes</p>
+
+      <h3>Beneficiaries</h3>
+      <p>25 direct (cooperative member-farmers, 60% women) · 100 indirect (household members) · 960 public (schoolchildren receiving fresh produce)</p>
+
+      <h3>Gender analysis (conducted: yes)</h3>
+      <div class="quote">"A 2025 baseline survey of 30 prospective members revealed: women hold 14% of land titles in the catchment but contribute 52% of farm labour; women report market access as their #1 constraint. Programme responds by titling 3 of 5 income streams via women-led producer groups."</div>
+
+      <h3>Benefit Traceability Matrix</h3>
+      <p>Each outcome traced to a sector / target group / mechanism. For example:</p>
+      <table>
+        <tr><th>Outcome</th><th>Sector</th><th>Groups</th><th>Mechanism</th></tr>
+        <tr><td>Stable smallholder income</td><td>Livelihoods &amp; Economy</td><td>Youth, women</td><td>Year-round drip-irrigated production + diversified market channels</td></tr>
+        <tr><td>Climate-resilient land</td><td>Ecosystem Services</td><td>Community</td><td>Trees on contour reduce runoff ~40%, sequester carbon</td></tr>
+        <tr><td>Public-good food supply</td><td>Food Security &amp; Agriculture</td><td>Schoolchildren</td><td>8 schools receive consistent fresh-produce supply at cost</td></tr>
+      </table>
+    </div>
+
+    <!-- Section 5 -->
+    <div class="section">
+      <h2>Section 5 — Value Proposition &amp; Sustainability</h2>
+      <p class="step-meta">~10–12 minutes</p>
+
+      <h3>Pathway: Hybrid (Revenue + Public Goods)</h3>
+      <div class="quote">"Agroforestry provides both monetisable produce (revenue stream — Kingston farm-to-table chain + cooperative market sales) AND public-good outputs (school fresh-food supply at cost, watershed services, microclimate cooling, biodiversity habitat). The hybrid structure ensures the operation reaches break-even within 24 months while preserving non-market public benefits that justify catalytic grant capital."</div>
+
+      <h3>Hybrid Anchor Partner: Yes — written commitment obtained</h3>
+      <p>Kingston Bistro Co-op Letter of Intent attached, committing to JMD 2.8M/yr produce off-take at fair-trade pricing for 3 years.</p>
+
+      <h3>Sustainability</h3>
+      <p>By Month 24, cooperative covers 100% of operating costs from market revenue. Drip irrigation has 15-year design life (annual maintenance JMD 80k from sales). Tree replacement (5%/yr) funded from operating reserves. Land tenure secured for 30 years.</p>
+
+      <div class="insight"><strong>What J-USE looks for:</strong> a clear post-grant funding pathway. Grant money should be CATALYTIC — kicking off something that becomes self-sustaining or attracts follow-on capital. "We'll apply for another grant" is not a sustainability plan.</div>
+    </div>
+
+    <!-- Section 6 -->
+    <div class="section">
+      <h2>Section 6 — Enablers &amp; Implementation</h2>
+      <p class="step-meta">~5–7 minutes</p>
+
+      <h3>Enablers (with Have / Need + notes)</h3>
+      <table>
+        <tr><th>Enabler</th><th>Status</th><th>Notes</th></tr>
+        <tr><td>Policy / Regulatory Support</td><td>Already Have</td><td>30-year community-owned lease; cooperative bylaws ratified by Department of Cooperatives.</td></tr>
+        <tr><td>Blended Finance Structure</td><td>Still Need</td><td>J-USE grant + Year-2+ revenue. Concessional loan needed for Year-3 expansion.</td></tr>
+        <tr><td>Technical Capacity Building</td><td>Already Have</td><td>HEART/NSTA-accredited curriculum co-developed; first cohort May 2026.</td></tr>
+        <tr><td>Community Governance</td><td>Already Have</td><td>Elected board (50% women, 100% youth); quarterly assemblies.</td></tr>
+        <tr><td>Market Aggregation Platform</td><td>Still Need</td><td>Kingston Bistro Co-op LOI executed; 8 school agreements in negotiation.</td></tr>
+        <tr><td>Data / Knowledge Systems</td><td>Still Need</td><td>Drone NDVI + IoT moisture sensors planned for Year 2.</td></tr>
+      </table>
+
+      <h3>Implementation Structure</h3>
+      <p>Project Lead (Cooperative) · Lead Agronomist (RADA Clarendon) · Training Coordinator (HEART/NSTA) · Finance + M&amp;E (Cooperative + external auditor) · Gender + Safeguarding Focal (Bureau of Gender Affairs) · Anchor Off-taker Liaison (Kingston Bistro Co-op).</p>
+
+      <div class="insight"><strong>Honesty matters:</strong> Don't claim to "Already Have" what you don't. Reviewers respect "Still Need" with a credible plan over inflated readiness claims.</div>
+    </div>
+
+    <!-- Section 7 -->
+    <div class="section">
+      <h2>Section 7 — Budget</h2>
+      <p class="step-meta">~3–5 minutes (the workbook does the heavy lifting)</p>
+
+      <table>
+        <tr><th>Line</th><th>Amount (JMD)</th><th>%</th></tr>
+        <tr><td>Total Project Cost</td><td>$8,350,000</td><td>100%</td></tr>
+        <tr><td>J-USE Grant Request</td><td>$6,200,000</td><td>74.3%</td></tr>
+        <tr><td>Co-financing — Cash</td><td>$1,200,000</td><td>14.4%</td></tr>
+        <tr><td>Co-financing — In-kind</td><td>$1,200,000</td><td>14.4%</td></tr>
+        <tr><td>Administrative Costs (max 10%)</td><td>$800,000</td><td>9.6% ✓</td></tr>
+      </table>
+
+      <p>Period: July 1, 2026 → June 30, 2027 (12 months).</p>
+
+      <div style="background: #e8f4fd; border-left: 4px solid #2196F3; padding: 18px 22px; border-radius: 6px; margin: 18px 0;">
+        <h3 style="color: #1565C0; margin-top: 0; text-transform: none; letter-spacing: 0; font-family: Georgia, serif; font-size: 1.05rem;">📊 Download the example budget workbook</h3>
+        <p>See exactly how the sample application form fills in the J-USE NbCS Budget Template — every category, every linked result, every SMART indicator. Use it as a structural reference (don't copy figures — your project's numbers are its own).</p>
+        <p style="margin-top: 14px;">
+          <a href="J-USE_Example_Hybrid_CommunityFarm_FINAL.xlsx" download style="display: inline-block; background: #1F7244; color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 0.92rem;">⬇ Download Sample Application Budget (Excel, 50 KB)</a>
+        </p>
+        <p style="font-size: 0.85rem; color: #555; margin-top: 10px;">Tip: open it side-by-side with the blank <a href="https://www.efj.org.jm/wp-content/uploads/2026/04/J-USE_NbCS_Budget_Template_FINAL_Neutral_Finaled.xlsx" target="_blank">J-USE NbCS Budget Template</a> as you fill in your own.</p>
+      </div>
+
+      <div class="insight"><strong>Critical:</strong> Use the J-USE NbCS Budget Template (Excel). Admin costs must be ≤10% of total. Currency = JMD only. The template auto-validates.</div>
+    </div>
+
+    <!-- Section 8 -->
+    <div class="section">
+      <h2>Section 8 — Training Needs Assessment (TNA)</h2>
+      <p class="step-meta">~8–10 minutes (16 competency self-ratings)</p>
+
+      <p>The TNA does not affect EOI screening — it helps J-USE design the capacity-building curriculum tailored to your cohort. <strong>Be honest.</strong> The example rates Stakeholder Engagement, Gender, Community = Advanced; M&amp;E, Business, Digital = Beginner.</p>
+
+      <p>Selected top capacity-building priorities: NbCS Design Principles · Climate Adaptation Logic · Financial Modelling for Hybrid · M&amp;E Framework · Value Chain Development · NDC Alignment.</p>
+
+      <p>Preferred learning formats: in-person workshops · case studies · peer learning circles · live virtual sessions.</p>
+    </div>
+
+    <!-- Section 9 -->
+    <div class="section">
+      <h2>Section 9 — Supporting Documents</h2>
+      <p class="step-meta">~5–7 minutes (uploads — have files ready)</p>
+
+      <h3>4 documents required for most applicants</h3>
+      <ol>
+        <li><strong>Letter of Intent and Authorisation</strong> (PDF) — signed by an authorised representative</li>
+        <li><strong>Detailed Budget Breakdown</strong> (Excel/PDF) — using the J-USE template</li>
+        <li><strong>Organisation Registration Certificate</strong> (PDF) — Companies Office, Cooperative Societies Registry, etc.</li>
+        <li><strong>Organisational Capacity / Previous Work</strong> (PDF, max 3 pages)</li>
+      </ol>
+
+      <h3>Government / SOE / Informal CBO: 3 documents</h3>
+      <p>Same as above MINUS the Registration Certificate (the form hides this field automatically when you select Gov / SOE / informal CBO at Step 1).</p>
+    </div>
+
+    <!-- Section 10 -->
+    <div class="section">
+      <h2>Section 10 — Declaration &amp; Submission</h2>
+      <p class="step-meta">~2–3 minutes</p>
+
+      <p>Tick all 8 declarations. Sign with your name + title + date. Submit.</p>
+
+      <h3>What happens at submission</h3>
+      <p>The form opens a 3-step modal: <strong>(1)</strong> Save your application as a camera-ready PDF (one click in the browser print dialog), <strong>(2)</strong> Re-attach that PDF to your submission, <strong>(3)</strong> Upload completes — you receive a JUSE-2026-XXXXXX reference number on screen + a confirmation email with the same PDF attached.</p>
+
+      <div class="insight"><strong>The PDF you save is the same PDF EFJ reviews.</strong> Keep it for your records. It includes everything you submitted, with your reference number on the cover.</div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-block">
+      <h2>Ready to write your own?</h2>
+      <p>The form takes ~45 minutes. Auto-saves every 30 seconds. You can stop and resume any time.</p>
+      <p style="margin-top: 18px;">
+        <a href="https://tevalerie.github.io/j-use-eoi-form-/J-USE_REOI_2026_Application_Form.html?prefill=1" class="btn">Open Form with Worked-Example Data Loaded</a>
+      </p>
+      <p style="margin-top: 14px; font-size: 0.9rem; opacity: 0.9;">Or start blank: <a href="https://tevalerie.github.io/j-use-eoi-form-/J-USE_REOI_2026_Application_Form.html" style="color: white; text-decoration: underline;">go straight to the application</a></p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>
+      <a href="index.html">Overview</a> ·
+      <a href="eligibility-check.html">Eligibility</a> ·
+      <a href="walkthrough.html">Sample Application Form</a> ·
+      <a href="faq.html">FAQ</a> ·
+      <a href="https://tevalerie.github.io/j-use-eoi-form-/J-USE_REOI_2026_Application_Form.html">Apply</a>
+    </p>
+  </footer>
+</body>
+</html>
