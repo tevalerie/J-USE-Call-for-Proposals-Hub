@@ -400,6 +400,57 @@
     .process-step h4 { margin: 0 0 6px; font-size: 0.95rem; color: #1a4a2e; }
     .process-step p { font-size: 0.8rem; color: #666; margin: 0; line-height: 1.4; }
 
+    /* ===== Featured REOI document callout ===== */
+    .reoi-callout {
+      background: linear-gradient(135deg, #1a4a2e, #2E8B57);
+      color: white;
+      padding: 24px 28px;
+      border-radius: 12px;
+      margin: 0 0 28px;
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+    }
+    @media (max-width: 720px) { .reoi-callout { flex-direction: column; text-align: center; } }
+    .reoi-callout-icon {
+      flex-shrink: 0;
+      width: 64px;
+      height: 64px;
+      background: rgba(255,255,255,0.18);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      font-weight: 700;
+    }
+    .reoi-callout-text { flex: 1; }
+    .reoi-callout-text h3 {
+      margin: 0 0 4px;
+      font-family: Georgia, serif;
+      font-size: 1.25rem;
+      color: white;
+    }
+    .reoi-callout-text p {
+      margin: 0;
+      opacity: 0.92;
+      font-size: 0.95rem;
+    }
+    .reoi-callout a.reoi-btn {
+      display: inline-block;
+      background: white;
+      color: #1a4a2e;
+      padding: 12px 22px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 14px;
+      white-space: nowrap;
+      transition: transform 0.15s;
+    }
+    .reoi-callout a.reoi-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,0.18); }
+
     /* ===== Eligibility highlight ===== */
     .parishes {
       background: #e8f5e9;
@@ -445,6 +496,7 @@
     <div class="cta-row">
       <a href="https://tevalerie.github.io/j-use-eoi-form-/J-USE_REOI_2026_Application_Form.html" class="btn btn-primary">Start Application →</a>
       <a href="eligibility-check.html" class="btn btn-secondary">60-second Eligibility Check</a>
+      <a href="materials/00-J-USE-REOI-2026-Call-and-Guidelines.pdf" target="_blank" class="btn btn-secondary">📄 Read the Full REOI</a>
     </div>
   </section>
 
@@ -516,8 +568,19 @@
 
   <!-- ===== Templates and guides ===== -->
   <div class="container" id="templates" style="padding-top: 0;">
-    <h2 class="section-title">Templates &amp; guides</h2>
-    <p class="section-sub">Download the templates, fill them out offline, then attach during your application.</p>
+    <h2 class="section-title">The Call &amp; Templates</h2>
+
+    <!-- Featured REOI document callout -->
+    <div class="reoi-callout">
+      <div class="reoi-callout-icon">📄</div>
+      <div class="reoi-callout-text">
+        <h3>J-USE REOI 2026 — Full Call &amp; Guidelines</h3>
+        <p>The complete Request for Expression of Interest document. Read this first — it covers the call's objectives, eligibility, priorities, evaluation criteria, and submission requirements in full.</p>
+      </div>
+      <a href="materials/00-J-USE-REOI-2026-Call-and-Guidelines.pdf" target="_blank" class="reoi-btn">📥 Read the REOI</a>
+    </div>
+
+    <p class="section-sub">Below: download the templates, fill them out offline, then attach during your application.</p>
     <div class="grid-2">
       <div class="card">
         <h3>Templates</h3>
