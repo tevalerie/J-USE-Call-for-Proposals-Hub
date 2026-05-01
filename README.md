@@ -24,4 +24,4 @@ Open `faq-content.json`, edit the categories/questions/answers, commit, push. Th
 
 ## Deadline
 
-May 3, 2026, 11:59 p.m. EST.
+**May 8, 2026, 11:59 p.m. EST** (extended from May 3).

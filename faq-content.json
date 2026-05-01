@@ -1,6 +1,6 @@
 {
   "_comment": "Edit this file to add / change / remove FAQ entries. The faq.html page reads it on every page load. Categories are free-text — group answers however helps applicants.",
-  "lastUpdated": "2026-04-30",
+  "lastUpdated": "2026-04-30 (deadline extended to May 8)",
   "categories": [
     {
       "name": "Eligibility & Scope",
@@ -48,7 +48,7 @@
         },
         {
           "q": "Can I edit my application after submitting?",
-          "a": "Once submitted you'll receive a JUSE-2026-XXXXXX reference number. To request edits, email <a href='mailto:grants@efj.org.jm'>grants@efj.org.jm</a> with your reference number BEFORE the May 3 deadline. After the deadline, the application is locked for review."
+          "a": "Once submitted you'll receive a JUSE-2026-XXXXXX reference number. To request edits, email <a href='mailto:grants@efj.org.jm'>grants@efj.org.jm</a> with your reference number BEFORE the May 8 deadline. After the deadline, the application is locked for review."
         }
       ]
     },
